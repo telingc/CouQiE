@@ -1,0 +1,35 @@
+{
+  "amp": true,
+  "bn_policy": "normal",
+  "channels_last": false,
+  "kernel_size": 3,
+  "batch_size": 6,
+  "gradient_clip": null,
+  "protocol": "exp13_four_class_imagenet_v1",
+  "class_names": [
+    "background",
+    "penguin",
+    "other_bird",
+    "seal"
+  ],
+  "num_classes": 4,
+  "epochs": 10,
+  "image_size": 640,
+  "requested_batch_size": 6,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0001,
+  "weight_decay": 0.01,
+  "seed": 42,
+  "ignore_index": 255,
+  "learning_rate_schedule": "constant",
+  "initialization": "ImageNet ResNet34 encoder; random decoder/head; no historical weights",
+  "sampling": "per-image 1/sqrt(group_size), replacement=True, draws=len(train)",
+  "group_rule": "largest converted foreground area; background if no target foreground",
+  "workers": 2,
+  "label_mapping": {
+    "4": 0,
+    "255": 255
+  },
+  "benchmark_version": "benchmark_v2",
+  "imagenet_sha256": "b627a593bcbe140c234610266fe4f8ae95ea42fc881d091c9b6052e6b1d0590f"
+}

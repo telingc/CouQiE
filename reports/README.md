@@ -1,6 +1,6 @@
 # Experiment reports
 
-Thirteen experiment entries now have concise English reports. Experiments 1-4 are retrospective inference replays using the surviving binary checkpoint. Experiments 5 and 7-12 use preserved trained weights. Experiment 6 is a historical resource test; experiment 13 has not run. No training was performed.
+14 experiment entries have concise English reports. Experiments 1-4 are retrospective inference replays using the surviving binary checkpoint. Experiments 5 and 7-12 use preserved trained weights. Experiment 6 is a historical resource test; experiment 13 is a separate four-class baseline. Experiment 14, when available, reports fixed-weight float32 scale sensitivity separately from the historical AMP comparison. No training is performed by this report builder.
 
 | Experiment | Purpose | Result | Status | Report |
 |---|---|---|---|---|
@@ -16,9 +16,10 @@ Thirteen experiment entries now have concise English reports. Experiments 1-4 ar
 | 10 | Explicit background supervision | Baseline / background historical animal mIoU: 84.62% / 83.28% | completed | [Read](exp10/README.md) |
 | 11 | Penguin-weighted replay | Historical animal mIoU: 86.94%; native/resize/union photo errors measured separately | completed | [Read](exp11/README.md) |
 | 12 | Sequential training without replay | Best / final historical animal mIoU: 30.44% / 6.89% | completed | [Read](exp12/README.md) |
-| 13 | Alternative sequential schedule | Not run; no measured result | not_run | [Read](exp13/README.md) |
+| 13 | New four-class ImageNet baseline | Separate four-class baseline; see its own metrics, not a whale-only ablation | completed | [Read](exp13/README.md) |
+| 14 | Inference Scale Sensitivity | Fixed experiment-13 weights; 75 float32 scale cases; see per-image diagnostics | completed | [Read](exp14/README.md) |
 
-Matched cross-model protocol: 640 letterbox resize, restored logits, original-resolution scoring.
+Historical binary/five-class comparison only: 640 letterbox resize, restored logits, original-resolution scoring. Resize uses AMP as recorded below. Experiments 13 and 14 have separate four-class reports; their results are not pooled into this table.
 
 | Protocol | Mean photo IoU (3) | Pooled penguin IoU | Penguin precision | Penguin recall | Wrong animal class | Landscape FP (6) | Far penguin centers |
 |---|---|---|---|---|---|---|---|
@@ -38,6 +39,10 @@ Matched cross-model protocol: 640 letterbox resize, restored logits, original-re
 
 The chart and table use the same resize protocol for every model. Direct/resize/union comparisons are in the individual reports.
 
-Fixed development references: three penguin photos and six full-background landscapes. The colony uses the user-edited mask; far uses the approved bands and near uses experiment-11 resize. These masks are diagnostic references, not an independent blind test. No positive other-bird, seal, or whale labels are present. Reported new photo scores are separate from historical 1,915-image animal validation. Standard letterbox resize uses CUDA AMP; legacy binary tile/stretch paths use float32. Native inference has a recorded float32 CPU fallback after GPU OOM. Historical models predate Wildlife source-group deduplication; no retraining was performed.
+Historical binary/five-class replay protocol (experiments 1-12). Fixed development references: three penguin photos and six full-background landscapes. The colony uses the user-edited mask; far uses the approved bands and near uses experiment-11 resize. These masks are diagnostic references, not an independent blind test. No positive other-bird, seal, or whale labels are present. Reported new photo scores are separate from historical 1,915-image animal validation. Standard letterbox resize uses CUDA AMP; legacy binary tile/stretch paths use float32. Native inference has a recorded float32 CPU fallback after GPU OOM. Historical models predate Wildlife source-group deduplication; no retraining was performed.
 
 [Reference definitions](references/benchmark.md) | [All image and pooled metrics](metrics.csv) | [Per-class pixel counts](class_metrics.csv)
+
+[Project closeout](CLOSEOUT.md) | [Code map](../CODE_MAP.md)
+
+Formal experiments stop at 14. The unnumbered experiment-10 scale preview was declined by the user and archived locally; it is excluded from this index.

@@ -1,0 +1,16 @@
+﻿split,source,images,background_images,penguin_images,other_bird_images,seal_images,background_pixels,penguin_pixels,other_bird_pixels,seal_pixels,ignored_pixels,whale_pixels_mapped_to_background
+train,dataset_penguins,389,0,389,0,0,113916151,45418249,0,0,0,0
+train,dataset_birds,4793,0,0,4793,0,1218377853,0,194037469,0,550797478,0
+train,dataset_seals,829,0,0,0,829,214182939,0,0,49055277,76320184,0
+train,dataset_wildlife,650,41,34,533,42,204880576,3314013,51778715,6266696,0,3324552
+train,dataset_nature,1759,1759,0,0,0,442739356,0,0,0,277747044,0
+valid,dataset_penguins,114,0,114,0,0,33225730,13468670,0,0,0,0
+valid,dataset_birds,1200,0,0,1200,0,306649534,0,48772780,0,136097686,0
+valid,dataset_seals,416,0,0,0,416,107511546,0,0,23742583,39139471,0
+valid,dataset_wildlife,185,12,10,151,12,57168328,1219990,15440933,1946749,0,988421
+valid,dataset_nature,129,129,0,0,0,32838371,0,0,0,20000029,0
+test,dataset_penguins,59,0,59,0,0,18185926,5980474,0,0,0,0
+test,dataset_birds,5794,0,0,5794,0,1471213662,0,227481877,0,674526861,0
+test,dataset_seals,832,0,0,0,832,217151510,0,0,49796025,73839665,0
+test,dataset_wildlife,94,6,5,77,6,28705076,597738,8184187,1015399,0,521887
+test,dataset_nature,112,112,0,0,0,28554841,0,0,0,17320359,0

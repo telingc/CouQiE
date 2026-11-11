@@ -1,6 +1,6 @@
 # Reference mask review
 
-Ten public example images have editable reference proposals. Editor status records the review checkbox and saved revisions. The separate [benchmark_v2 snapshot](benchmark.md) uses the colony edit, the approved far-photo bands, the experiment-11 resize mask for near, and full-background landscape masks. Original proposals and benchmark_v1 remain preserved.
+Ten public example images have editable reference proposals. These review_v1 proposals are separate from the frozen benchmark_v2 used in experiments 13/14; reviewing a proposal does not authorize overwriting that benchmark. Any future accepted reference change needs a new version. Editor status records the review checkbox and saved revisions. The separate [benchmark_v2 snapshot](benchmark.md) uses the colony edit, the approved far-photo bands, the experiment-11 resize mask for near, and full-background landscape masks. Original proposals and benchmark_v1 remain preserved.
 
 Open `artifacts/reference_review/editor.html` in Edge or Chrome. Click **Open photos** and select the original files in `data/examples/`. Click **Output folder** and choose `data/reference_masks/review_v1/`. The editor reads the current mask revisions from that folder. All processing stays local; no server is needed.
 
@@ -30,6 +30,6 @@ Saving writes a full-resolution class-ID PNG and updates `manifest.json`; previo
 
 To rebuild the offline editor, run `python scripts/annotate.py --offline` using the project environment. A localhost server is also available through `python scripts/annotate.py`, but the offline editor avoids localhost access restrictions. No training is performed.
 
-Validation: brush/polygon rasterization, background erasing, ignored labels, undo/redo, revision persistence, grayscale mask roundtrip, conflict rejection, and exact far-photo bands passed code-level checks. Browser interaction and the directory permission picker could not be verified in the current automation session.
+Validation: brush/polygon rasterization, background erasing, ignored labels, undo/redo, revision persistence, grayscale mask roundtrip, conflict rejection, and exact far-photo bands passed code-level checks. Browser interaction and the directory permission picker were not verified in the original editor-preparation session; no new browser verification was performed during closeout.
 
 ![Far-photo seed](penguins_far.jpg)

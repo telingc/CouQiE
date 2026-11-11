@@ -11,4 +11,5 @@
 10,Explicit background supervision,completed,reports/exp10/README.md,benchmark_v2,Baseline resize,0.7523352638722777,0.03792829222165979,Baseline / background historical animal mIoU: 84.62% / 83.28%
 11,Penguin-weighted replay,completed,reports/exp11/README.md,benchmark_v2,Native,0.4249067942852542,0.21591509613742024,Historical animal mIoU: 86.94%; native/resize/union photo errors measured separately
 12,Sequential training without replay,completed,reports/exp12/README.md,benchmark_v2,Overall best resize,0.0,0.0,Best / final historical animal mIoU: 30.44% / 6.89%
-13,Alternative sequential schedule,not_run,reports/exp13/README.md,not_applicable,,,,Not run; no measured result
+13,New four-class ImageNet baseline,completed,reports/exp13/README.md,benchmark_v2,,,,"Separate four-class baseline; see its own metrics, not a whale-only ablation"
+14,Inference Scale Sensitivity,completed,reports/exp14/README.md,benchmark_v2,,,,Fixed experiment-13 weights; 75 float32 scale cases; see per-image diagnostics

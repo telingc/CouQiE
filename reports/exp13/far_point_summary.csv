@@ -1,0 +1,3 @@
+﻿method,points,penguin_hits,any_animal_hits,note
+native,16,11,11,Strict pixel hits at the existing 16 body centers; not instance recall
+resize,16,0,0,Strict pixel hits at the existing 16 body centers; not instance recall

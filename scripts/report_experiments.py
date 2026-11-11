@@ -18,7 +18,7 @@ for value, color in {0:(166,133,245),1:(255,65,77),2:(255,167,38),3:(0,190,220),
     COLORS[value] = color
 PHOTOS = ("penguins_far.jpg", "penguins_near.jpg", "penguin_colony.jpg", "antarctic_landscape_untitled_2.jpg")
 FONT = "C:/Windows/Fonts/arial.ttf"
-COMMON = ("Fixed development references: three penguin photos and six full-background landscapes. "
+COMMON = ("Historical binary/five-class replay protocol (experiments 1-12). Fixed development references: three penguin photos and six full-background landscapes. "
     "The colony uses the user-edited mask; far uses the approved bands and near uses experiment-11 resize. "
     "These masks are diagnostic references, not an independent blind test. No positive other-bird, seal, or whale labels are present. "
     "Reported new photo scores are separate from historical 1,915-image animal validation. "
@@ -302,7 +302,7 @@ class Reports:
             [("Best resize","exp12_best","resize"),("Final resize","exp12_final","resize"),("Final native","exp12_final","native")],
             "The overall selected checkpoint is from stage 1 (30.44% historical animal mIoU); the final checkpoint is 6.89%. Later sequential stages reduce performance on the combined validation set, consistent with forgetting and specialization. The final model can nevertheless score better on penguin-only development references: overall best refers to the historical multi-animal selection criterion. Displaying only the selected best would hide the final outcome.",extra=stage_table,
             historical=[("Overall best","exp12_best"),("Final","exp12_final")])
-        self.planned()
+        self.current_experiments()
         self.reference_report()
         self.summary()
 
@@ -327,13 +327,20 @@ class Reports:
         (folder/'README.md').write_text(text,encoding='utf-8')
         self.index.append(dict(experiment=6,title='Batch size and throughput',status='historical_resource_test',report='reports/exp06/README.md',reference_version='not_applicable'))
 
-    def planned(self):
-        folder=ROOT/'reports/exp13';folder.mkdir(exist_ok=True)
-        text="# Experiment 13: alternative sequential schedule\n\nThis is an implemented plan, not a completed experiment. The configured schedule is background/wildlife 15 epochs, other birds 5, and penguins 10; separate seal/whale stages are omitted. No checkpoint, measured metrics, or prediction visualization was found, and no training was started for this report.\n\n"
-        text+=md_table(['Planned stage','Epochs','Measured result'],[['Background + wildlife',15,'Not run'],['Other bird',5,'Not run'],['Penguin',10,'Not run']])
-        text+='\n\nThe default initializer still uses binary features plus a fresh head. A proposed future ImageNet-only restart is not an executed result.\n\n[All experiment reports](../README.md)\n'
-        (folder/'README.md').write_text(text,encoding='utf-8')
-        self.index.append(dict(experiment=13,title='Alternative sequential schedule',status='not_run',report='reports/exp13/README.md',reference_version='not_applicable'))
+    def current_experiments(self):
+        """Register separately evaluated experiments 13/14; never run a network."""
+        from experiment13 import update_report
+        update_report(ROOT)
+        pointer=ROOT/'artifacts/experiments/exp13_results/latest_4class.json'
+        completed=pointer.exists() and (Path(read(pointer)['folder'])/'training_result.json').exists()
+        self.index.append(dict(experiment=13,title='New four-class ImageNet baseline',
+            status='completed' if completed else 'prepared',report='reports/exp13/README.md',reference_version='benchmark_v2'))
+        scale_pointer=ROOT/'artifacts/experiments/exp14_results/latest.json'
+        if scale_pointer.exists():
+            scale_result=read(scale_pointer)
+            self.index.append(dict(experiment=14,title='Inference Scale Sensitivity',
+                status='completed' if scale_result['status']=='complete' else scale_result['status'],
+                report='reports/exp14/README.md',reference_version='benchmark_v2'))
 
     def reference_report(self):
         folder=ROOT/'reports/references'
@@ -365,7 +372,8 @@ class Reports:
             10:f"Baseline / background historical animal mIoU: {hist('exp8_kernel5')} / {hist('exp10_best')}",
             11:f"Historical animal mIoU: {hist('exp11_best')}; native/resize/union photo errors measured separately",
             12:f"Best / final historical animal mIoU: {hist('exp12_best')} / {hist('exp12_final')}",
-            13:'Not run; no measured result'}
+            13:'Separate four-class baseline; see its own metrics, not a whale-only ablation',
+            14:'Fixed experiment-13 weights; 75 float32 scale cases; see per-image diagnostics'}
         for row in self.index:row['key_result']=headlines[row['experiment']]
         write_csv(report_root/'index.csv',self.index)
         write_csv(report_root/'metrics.csv',self.rows)
@@ -397,30 +405,13 @@ class Reports:
         fig.tight_layout();fig.savefig(report_root/'overview.jpg',dpi=150);plt.close(fig)
         # Keep the main cross-model table on a matched resize protocol.
         matched=[(title,v,'resize') for title,v,_ in protocols]
-        text="# Experiment reports\n\nThirteen experiment entries now have concise English reports. Experiments 1-4 are retrospective inference replays using the surviving binary checkpoint. Experiments 5 and 7-12 use preserved trained weights. Experiment 6 is a historical resource test; experiment 13 has not run. No training was performed.\n\n"
+        text=f"# Experiment reports\n\n{len(self.index)} experiment entries have concise English reports. Experiments 1-4 are retrospective inference replays using the surviving binary checkpoint. Experiments 5 and 7-12 use preserved trained weights. Experiment 6 is a historical resource test; experiment 13 is a separate four-class baseline. Experiment 14, when available, reports fixed-weight float32 scale sensitivity separately from the historical AMP comparison. No training is performed by this report builder.\n\n"
         text+=md_table(['Experiment','Purpose','Result','Status','Report'],[(r['experiment'],r['title'],r['key_result'],r['status'],f"[Read]({Path(r['report']).relative_to('reports').as_posix()})") for r in self.index])
-        text+='\n\nMatched cross-model protocol: 640 letterbox resize, restored logits, original-resolution scoring.\n\n'+self.score_table(matched)
+        text+='\n\nHistorical binary/five-class comparison only: 640 letterbox resize, restored logits, original-resolution scoring. Resize uses AMP as recorded below. Experiments 13 and 14 have separate four-class reports; their results are not pooled into this table.\n\n'+self.score_table(matched)
         text+='\n\n![Development-reference overview](overview.jpg)\n\nThe chart and table use the same resize protocol for every model. Direct/resize/union comparisons are in the individual reports.\n\n'+COMMON
         text+='\n\n[Reference definitions](references/benchmark.md) | [All image and pooled metrics](metrics.csv) | [Per-class pixel counts](class_metrics.csv)\n'
+        text+='\n[Project closeout](CLOSEOUT.md) | [Code map](../CODE_MAP.md)\n\nFormal experiments stop at 14. The unnumbered experiment-10 scale preview was declined by the user and archived locally; it is excluded from this index.\n'
         (report_root/'README.md').write_text(text,encoding='utf-8')
-        notebook_path = ROOT / 'launch.ipynb'
-        notebook = read(notebook_path)
-        for cell in notebook['cells']:
-            if cell['cell_type'] == 'markdown':
-                text = ''.join(cell.get('source', []))
-                text = text.replace('reports/exp11/preview.jpg', 'reports/overview.jpg')
-                text = text.replace('Experiment 11 preview', 'Development reference overview')
-                text = text.replace('## Fresh evaluation', '## Fixed-reference evaluation')
-                text = text.replace('This reruns inference and metrics without training. Model-reference agreement and provisional ROI accuracy are reported separately.',
-                    'This evaluates the frozen nine-photo development reference set and rebuilds all experiment reports. Verified prediction caches are reused; missing predictions are computed. No training is performed.')
-                cell['source'] = text.splitlines(keepends=True)
-            elif cell['cell_type']=='code' and 'from evaluate_project import run_evaluation' in ''.join(cell.get('source',[])):
-                flag = next((line for line in ''.join(cell['source']).splitlines() if line.startswith('RUN_EVALUATION =')), 'RUN_EVALUATION = False')
-                cell['source'] = [flag+'\n','if RUN_EVALUATION:\n',
-                    '    from reference_benchmark import run\n',
-                    '    from report_experiments import main as build_reports\n',
-                    '    evaluation = run()\n','    build_reports()']
-        notebook_path.write_text(json.dumps(notebook,indent=1)+'\n',encoding='utf-8')
 
 
 def main():

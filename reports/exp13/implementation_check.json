@@ -1,0 +1,18 @@
+{
+  "status": "prepared_not_trained",
+  "checks": [
+    "syntax",
+    "4->0 mapping without source mutation",
+    "255 preservation",
+    "group recomputation",
+    "1/sqrt(n) sampler weights and draw logging",
+    "ignored-pixel FP accounting",
+    "five-class globals unchanged",
+    "plan-only guard"
+  ],
+  "real_forward_backward_run": false,
+  "training_run": false,
+  "gpu_inference_run": false,
+  "preflight": "Deferred to user-started training flow",
+  "full_dataset_audit": "Deferred to user-started training flow"
+}

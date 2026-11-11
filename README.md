@@ -1,52 +1,79 @@
 # Antarctic Animal Segmentation
 
-Hand-written ResNet-34 U-Net for background, penguin, other bird, seal, and whale.
-Code, lightweight reports, and large local artifacts have separate homes.
+The formal project closes at experiments **1-14**. The retained baseline is the
+four-class experiment-13 hand-written ResNet34 U-Net: background, penguin, other
+bird and seal. Experiment 14 diagnoses inference-scale sensitivity with those
+fixed weights. Historical binary and five-class experiments remain reproducible.
 
-| Path | Purpose | Git |
+Start with [project closeout](reports/CLOSEOUT.md), [all experiment reports](reports/README.md),
+[code map](CODE_MAP.md), and [dataset policy](DATASETS.md).
+
+| Location | Content | Git |
 |---|---|---|
-| scripts/ | Model, datasets, training, experiments, evaluation, and maintenance | Track |
-| launch.ipynb | Small entry point; no embedded pictures or saved outputs | Track |
-| reports/ | Short summaries, CSV metrics, configurations, and selected previews | Track |
-| data/ | Original/prepared datasets, example photographs, and private course images | Ignore |
-| artifacts/ | Checkpoints, complete predictions, historical runs, logs, and backups | Ignore |
+| scripts/ | Active model, data, experiment, reporting and checking code | Track |
+| launch.ipynb | Small launcher with explicit execution switches; no saved outputs or images | Track |
+| reports/ | English reports, metric CSVs and selected public figures | Track |
+| data/ | Original/prepared datasets, references and private NJU photos | Ignore |
+| artifacts/ | Checkpoints, full predictions, galleries, backups and rejected previews | Ignore |
 
-## Use
+## Read and verify
 
-Run from the project root with the existing Python environment:
+Open [launch.ipynb](launch.ipynb) from the project root in the existing Python
+environment. All execution switches default to False. Reports can be read without
+running the notebook or loading a model.
 
 ```powershell
-& E:\workspace\pyscripts\.venv\Scripts\python.exe scripts\reference_benchmark.py
-& E:\workspace\pyscripts\.venv\Scripts\python.exe scripts\report_experiments.py
+python scripts/check_project.py
+python scripts/check_project.py --local-results
 ```
 
-Open launch.ipynb after restarting its kernel. Its default cells do not train.
-Historical experiment functions remain in scripts/experiment1.py through
-scripts/experiment13.py. Use a new run directory for new training: the dataset
-view now deduplicates Wildlife source variants. Existing runs are historical.
+The first command checks source syntax, local imports, documentation links, the
+formal index, notebook defaults and private-file tracking. The second also hashes
+local result sources and checks experiment-13/14 metadata. Neither command imports
+torch, trains, runs inference or downloads data.
 
-## Read results
+To regenerate reports from existing logs and saved predictions:
 
-- [Experiment index](reports/index.csv)
-- [All experiment reports](reports/README.md)
-- [Experiment 11 report](reports/exp11/README.md)
-- [Fixed development references](reports/references/benchmark.md)
-- [Dataset policy](DATASETS.md)
-- [Reference mask editor](reports/references/README.md)
-- Full local results: artifacts/evaluation/latest.json and its gallery.html.
+```powershell
+python scripts/report_experiments.py
+```
 
-The fixed development set contains three penguin references and six landscapes
-declared background by the user. Model-assisted reference masks are not an
-independent blind test. No course-image pixels are stored in tracked reports.
-The active reference version is benchmark_v2: penguins_near uses experiment-11
-resize; the eight other references are unchanged. To rescore saved predictions
-without running networks, use scripts/reference_benchmark.py --rescore-only.
-An additional full-dataset/ROI audit is available through scripts/evaluate_project.py;
-its complete outputs stay under artifacts/evaluation/ and do not overwrite reports.
+This redraws reports, including experiment-13 training curves; it does not run a
+network or edit launch.ipynb. Local data and artifact caches are required. The
+observed environment is recorded in [environment.json](reports/environment.json).
+The local interpreter used for completed runs is
+`E:\workspace\pyscripts\.venv\Scripts\python.exe`.
 
-## Storage policy
+## Retained results
 
-Keep class-ID masks once; render overlays on demand. Use external image links,
-not notebook attachments. Keep only small curated previews in reports. Full
-checkpoints and archived notebooks remain local. The migration backup is
-artifacts/archive/before_cleanup.bundle; source/metadata snapshots are beside it.
+- [Experiment 13: four-class baseline and training curves](reports/exp13/README.md).
+- [Experiment 14: fixed-weight scale sensitivity](reports/exp14/README.md).
+- [Formal experiment index](reports/index.csv) and [historical comparison](reports/README.md).
+- [Frozen benchmark_v2 definitions](reports/references/benchmark.md).
+- [Reference review editor](reports/references/README.md).
+
+The nine-photo development benchmark contains three penguin references and six
+user-declared background landscapes. Some masks are model-assisted; these are not
+independent blind-test scores. Animal validation, natural-background validation,
+and development-photo metrics are separate. NJU has no manual masks here and is
+visualization only. Course photos and their visualizations stay in ignored storage.
+
+Four-class mIoU cannot be compared directly with historical five-class mIoU.
+Historical cross-model reports use their recorded AMP protocol; experiment 14 uses
+fresh float32 predictions. Scale sensitivity does not establish a universally best
+input resolution or a kernel-only causal effect.
+
+## Reproduction boundary
+
+Training and full inference remain available through explicit notebook switches
+and experiment APIs. Use new run directories when changing model/data settings;
+verify checkpoint, image, preprocessing and precision hashes before reusing caches.
+`reference_benchmark.py --rescore-only` rescales no images and scores saved class
+masks on the CPU; its bare command can run historical inference and is not needed
+for closeout. `prepare_datasets.py` and `download_nature.py` intentionally modify
+local data and are not part of routine verification.
+
+The unnumbered experiment-10 5x5 scale preview was declined and archived locally;
+it is not experiment 15. One-time migration tools were also archived. See
+[cleanup record](reports/cleanup.md). Checkpoints, source data, frozen reference
+masks and historical predictions are preserved.

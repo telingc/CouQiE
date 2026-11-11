@@ -1,0 +1,159 @@
+{
+  "protocol": "exp14_fixed_weights_float32_v1",
+  "checkpoint": "E:\\workspace\\pyscripts\\semseg\\artifacts\\experiments\\exp13_results\\run_20261111_150108\\best.pt",
+  "checkpoint_sha256": "ef619766453cb7e6fa9b33dfcf09d7319258796839dca104f3952abab0e43742",
+  "class_names": [
+    "background",
+    "penguin",
+    "other_bird",
+    "seal"
+  ],
+  "settings": [
+    "640",
+    "960",
+    "1280",
+    "1920",
+    "Native"
+  ],
+  "target_sizes": [
+    640,
+    960,
+    1280,
+    1920,
+    null
+  ],
+  "benchmark_version": "benchmark_v2",
+  "reference_manifest_sha256": "10af8d05e87bddc3c1aa509b6fc94be12c58ea8f6968df09d66b77c3cb6b5e2b",
+  "far_point_protocol_sha256": "29f5e5f9e4b79d3342ff499e5e6bf3bdd856642b3f506b1734172ab6de1b1239",
+  "far_point_protocol": {
+    "coordinates": [
+      [
+        96,
+        2194
+      ],
+      [
+        290,
+        2210
+      ],
+      [
+        620,
+        2200
+      ],
+      [
+        780,
+        2210
+      ],
+      [
+        873,
+        2220
+      ],
+      [
+        985,
+        2220
+      ],
+      [
+        1055,
+        2225
+      ],
+      [
+        1160,
+        2235
+      ],
+      [
+        1207,
+        2225
+      ],
+      [
+        1290,
+        2235
+      ],
+      [
+        1390,
+        2255
+      ],
+      [
+        1557,
+        2250
+      ],
+      [
+        1645,
+        2250
+      ],
+      [
+        1728,
+        2255
+      ],
+      [
+        1830,
+        2260
+      ],
+      [
+        1982,
+        2260
+      ]
+    ],
+    "hit_rule": "exact pixel; no radius",
+    "source_code_sha256": "b484bd81563872a2346cf59aadb8d2679d6d4667e6da071329a5aad171c8b7b9"
+  },
+  "rois": {
+    "penguins_near.jpg": {
+      "head": [
+        1950,
+        900,
+        3100,
+        2050
+      ],
+      "chest": [
+        2100,
+        2100,
+        3400,
+        3300
+      ]
+    },
+    "penguins_far.jpg": {
+      "distant_region": [
+        0,
+        2050,
+        2300,
+        2450
+      ]
+    }
+  },
+  "roi_coordinate_system": "original image; [x0,y0,x1,y1), fixed from RGB before experiment-14 predictions",
+  "normalization": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "padding_color": [
+    124,
+    116,
+    104
+  ],
+  "resize": "PIL bilinear RGB; centered integer letterbox; continuous bilinear logits before argmax",
+  "precision": "float32",
+  "amp": false,
+  "tf32": false,
+  "backend": {
+    "api": "fp32_precision",
+    "matmul": "ieee",
+    "convolution": "ieee"
+  },
+  "torch_version": "2.13.0+cu132",
+  "cuda_version": "13.2",
+  "cudnn_version": 92000,
+  "pillow_version": "12.3.0",
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": false,
+  "deterministic_algorithms": false,
+  "inference_graph": "Existing compact head: same weights, final affine 1x1 head before interpolation at every scale",
+  "inference_code_sha256": "181d7e8c789dd310216b30048355cb3ae6c62bfdfba04197ced9867a2b9d561c",
+  "legend": "640 x 640 input-size reference; not receptive field"
+}
