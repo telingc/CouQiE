@@ -1,0 +1,4 @@
+﻿split,raw_images,source_groups,groups_with_three_variants,groups_with_two_variants
+train,7858,2627,2604,23
+valid,745,745,0,0
+test,381,381,0,0

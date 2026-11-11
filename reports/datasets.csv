@@ -1,0 +1,6 @@
+﻿source,train,valid,test
+dataset_penguins,389,114,59
+dataset_birds,4793,1200,5794
+dataset_seals,829,416,832
+dataset_wildlife,650,185,94
+dataset_nature,1759,129,112

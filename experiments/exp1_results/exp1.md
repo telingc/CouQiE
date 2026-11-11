@@ -1,1 +1,0 @@
-## Experiment 1: ResNet-34 U-Net with Overlapping Sliding-window Inference

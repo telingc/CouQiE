@@ -1,4 +1,6 @@
-__pycache__/
-nju_testset/
-runs/
-dataset/
+/data/
+/artifacts/
+**/__pycache__/
+**/.ipynb_checkpoints/
+*.pyc
+*.tmp

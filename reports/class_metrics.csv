@@ -1,0 +1,586 @@
+﻿variant,method,image_group,class_name,target_pixels,tp,fp,fn,iou,precision,recall,note
+binary,native,all,background,130485925,129668427,4127216,817498,0.9632672266372567,0.9691528370621157,0.9937349717986825,
+binary,native,all,penguin,7752514,3625298,817498,4127216,0.4230213446608943,0.8159947024351332,0.46762869438223525,
+binary,native,all,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,native,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,native,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,native,penguin_photos,background,49217726,48812725,4127216,405001,0.9150394239813776,0.9220396562209996,0.9917712370539021,
+binary,native,penguin_photos,penguin,7752514,3625298,405001,4127216,0.44441205440627446,0.8995109295861176,0.46762869438223525,
+binary,native,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,native,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,native,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize,all,background,130485925,126001166,1912928,4484759,0.9516786825940252,0.9850452132350639,0.965630323730318,
+binary,resize,all,penguin,7752514,5839586,4484759,1912928,0.47719667608951766,0.5656132180782413,0.7532506229592104,
+binary,resize,all,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize,penguin_photos,background,49217726,49070018,1912928,147708,0.959698618366978,0.9624790611354628,0.9969988861330163,
+binary,resize,penguin_photos,penguin,7752514,5839586,147708,1912928,0.7391673297282025,0.9753297566479949,0.7532506229592104,
+binary,resize,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,union,all,background,130485925,125400388,501585,5085537,0.9573461469723334,0.9960160671985656,0.9610261643161897,
+binary,union,all,penguin,7752514,7250929,5085537,501585,0.5647998282605358,0.5877638701391468,0.9353003425727447,
+binary,union,all,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,union,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,union,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,union,penguin_photos,background,49217726,48713485,501585,504241,0.9797699127407458,0.9898083046514005,0.9897548903417439,
+binary,union,penguin_photos,penguin,7752514,7250929,504241,501585,0.8781814405296028,0.9349800197803529,0.9353003425727447,
+binary,union,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,union,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,union,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tiles,all,background,130485925,129895886,4654093,590039,0.9611948253551365,0.9654099314277856,0.9954781406500356,
+binary,tiles,all,penguin,7752514,3098421,590039,4654093,0.3713996183182774,0.8400310698774014,0.3996666113727753,
+binary,tiles,all,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tiles,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tiles,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tiles,penguin_photos,background,49217726,48896480,4654093,321246,0.9076448671614374,0.9130897628303623,0.9934729613473,
+binary,tiles,penguin_photos,penguin,7752514,3098421,321246,4654093,0.38376431798814925,0.9060592741924872,0.3996666113727753,
+binary,tiles,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tiles,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tiles,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,stretch_resize,all,background,130485925,125606425,1641284,4879500,0.9506476822650511,0.987101661688856,0.962605162204276,
+binary,stretch_resize,all,penguin,7752514,6111230,4879500,1641284,0.4837890458322798,0.5560349494528571,0.7882900953161774,
+binary,stretch_resize,all,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,stretch_resize,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,stretch_resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,stretch_resize,penguin_photos,background,49217726,49048344,1641284,169382,0.9643983239154675,0.9676209105342024,0.9965585163361672,
+binary,stretch_resize,penguin_photos,penguin,7752514,6111230,169382,1641284,0.7714352725660625,0.9730309721409315,0.7882900953161774,
+binary,stretch_resize,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,stretch_resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,stretch_resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,fusion_060,all,background,130485925,126479493,1505743,4006432,0.958238462445978,0.9882350257962567,0.969296060092305,
+binary,fusion_060,all,penguin,7752514,6246771,4006432,1505743,0.5312356226484924,0.6092506897600681,0.805773585187979,
+binary,fusion_060,all,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,fusion_060,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,fusion_060,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,fusion_060,penguin_photos,background,49217726,49086241,1505743,131485,0.9677224757636351,0.9702375182598098,0.9973285031494548,
+binary,fusion_060,penguin_photos,penguin,7752514,6246771,131485,1505743,0.7923353364200072,0.9793854307509764,0.805773585187979,
+binary,fusion_060,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,fusion_060,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,fusion_060,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tile_biased_020,all,background,130485925,129923646,4614458,562279,0.9616822921960184,0.9657014788910657,0.9956908839018461,
+binary,tile_biased_020,all,penguin,7752514,3138056,562279,4614458,0.37740638883012484,0.8480464606582917,0.4047791464807416,
+binary,tile_biased_020,all,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tile_biased_020,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tile_biased_020,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tile_biased_020,penguin_photos,background,49217726,48917146,4614458,300580,0.9086970352159592,0.9137993698077869,0.9938928507180522,
+binary,tile_biased_020,penguin_photos,penguin,7752514,3138056,300580,4614458,0.3896708519731671,0.9125874329239849,0.4047791464807416,
+binary,tile_biased_020,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tile_biased_020,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tile_biased_020,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize_biased_080,all,background,130485925,125853771,1580328,4632154,0.9529593529090282,0.9875988608041243,0.9645007382980195,
+binary,resize_biased_080,all,penguin,7752514,6172186,4632154,1580328,0.49837314976873015,0.5712691381426352,0.7961528350674375,
+binary,resize_biased_080,all,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize_biased_080,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize_biased_080,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize_biased_080,penguin_photos,background,49217726,49070965,1580328,146761,0.9660008826322363,0.9687998488014906,0.9970181271682483,
+binary,resize_biased_080,penguin_photos,penguin,7752514,6172186,146761,1580328,0.7813610742758038,0.9767744530853004,0.7961528350674375,
+binary,resize_biased_080,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize_biased_080,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize_biased_080,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,dual_union,all,background,130485925,125454708,747934,5031217,0.9559629576998113,0.9940735472083064,0.9614424544256401,
+binary,dual_union,all,penguin,7752514,7004580,5031217,747934,0.5479292391243213,0.5819789084179469,0.9035236827692281,
+binary,dual_union,all,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,dual_union,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,dual_union,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,dual_union,penguin_photos,background,49217726,48839004,747934,378722,0.9774513936171363,0.9849167133489872,0.9923051707021165,
+binary,dual_union,penguin_photos,penguin,7752514,7004580,378722,747934,0.8614409912588935,0.9487056062450107,0.9035236827692281,
+binary,dual_union,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,dual_union,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,dual_union,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,native,landscapes,background,81268199,80855702,0,412497,0.9949242507515147,1.0,0.9949242507515147,
+binary,native,landscapes,penguin,0,0,412497,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+binary,native,landscapes,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,native,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,native,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize,landscapes,background,81268199,76931148,0,4337051,0.9466328643507899,1.0,0.9466328643507899,
+binary,resize,landscapes,penguin,0,0,4337051,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize,landscapes,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,union,landscapes,background,81268199,76686903,0,4581296,0.9436274452199931,1.0,0.9436274452199931,
+binary,union,landscapes,penguin,0,0,4581296,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+binary,union,landscapes,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,union,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,union,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tiles,landscapes,background,81268199,80999406,0,268793,0.9966925192965086,1.0,0.9966925192965086,
+binary,tiles,landscapes,penguin,0,0,268793,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tiles,landscapes,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tiles,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tiles,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,stretch_resize,landscapes,background,81268199,76558081,0,4710118,0.9420422987348348,1.0,0.9420422987348348,
+binary,stretch_resize,landscapes,penguin,0,0,4710118,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+binary,stretch_resize,landscapes,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,stretch_resize,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,stretch_resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,fusion_060,landscapes,background,81268199,77393252,0,3874947,0.9523190245670389,1.0,0.9523190245670389,
+binary,fusion_060,landscapes,penguin,0,0,3874947,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+binary,fusion_060,landscapes,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,fusion_060,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,fusion_060,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tile_biased_020,landscapes,background,81268199,81006500,0,261699,0.9967798105135811,1.0,0.9967798105135811,
+binary,tile_biased_020,landscapes,penguin,0,0,261699,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tile_biased_020,landscapes,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tile_biased_020,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,tile_biased_020,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize_biased_080,landscapes,background,81268199,76782806,0,4485393,0.9448075255119164,1.0,0.9448075255119164,
+binary,resize_biased_080,landscapes,penguin,0,0,4485393,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize_biased_080,landscapes,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize_biased_080,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,resize_biased_080,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,dual_union,landscapes,background,81268199,76615704,0,4652495,0.9427513460708044,1.0,0.9427513460708044,
+binary,dual_union,landscapes,penguin,0,0,4652495,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+binary,dual_union,landscapes,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,dual_union,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+binary,dual_union,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,native,all,background,130485925,109010183,3450399,21475742,0.8138955866819221,0.9693190366025315,0.8354171762203472,
+exp5_initial,native,all,penguin,7752514,3527,716,7748987,0.000454907180620206,0.8312514730143766,0.00045494919454515013,
+exp5_initial,native,all,other_bird,0,0,23877896,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,native,all,seal,0,0,1876596,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,native,all,whale,0,0,19122,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,native,penguin_photos,background,49217726,38844470,3450399,10373256,0.7375328056580712,0.9184203880617292,0.7892373979244794,
+exp5_initial,native,penguin_photos,penguin,7752514,3527,703,7748987,0.00045490794337369893,0.8338061465721041,0.00045494919454515013,
+exp5_initial,native,penguin_photos,other_bird,0,0,13932222,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,native,penguin_photos,seal,0,0,719797,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,native,penguin_photos,whale,0,0,19122,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,resize,all,background,130485925,126577283,3760753,3908642,0.9428708768495561,0.9711461587467837,0.9700454895805812,
+exp5_initial,resize,all,penguin,7752514,3972,13352,7748542,0.0005114690364216946,0.22927730316324174,0.0005123499293261515,
+exp5_initial,resize,all,other_bird,0,0,7029060,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,resize,all,seal,0,0,725666,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,resize,all,whale,0,0,128353,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,resize,penguin_photos,background,49217726,49150626,3760753,67100,0.9277470196907691,0.9289235496961816,0.9986366700485105,
+exp5_initial,resize,penguin_photos,penguin,7752514,3972,0,7748542,0.0005123499293261515,1.0,0.0005123499293261515,
+exp5_initial,resize,penguin_photos,other_bird,0,0,3548448,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,resize,penguin_photos,seal,0,0,378088,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,resize,penguin_photos,whale,0,0,128353,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,union,all,background,130485925,108521599,1391430,21964326,0.8228979038895646,0.9873406272881443,0.831672833679188,
+exp5_initial,union,all,penguin,7752514,4693,2300,7747821,0.0006051724773798572,0.6710996710996711,0.0006053520187128975,
+exp5_initial,union,all,other_bird,0,0,26941109,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,union,all,seal,0,0,1306654,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,union,all,whale,0,0,70654,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,union,penguin_photos,background,49217726,38844243,1391430,10373483,0.767533902363438,0.9654180010857529,0.7892327857650311,
+exp5_initial,union,penguin_photos,penguin,7752514,4693,703,7747821,0.0006052971302105952,0.8697183098591549,0.0006053520187128975,
+exp5_initial,union,penguin_photos,other_bird,0,0,15970538,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,union,penguin_photos,seal,0,0,687979,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,union,penguin_photos,whale,0,0,70654,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,native,landscapes,background,81268199,70165713,0,11102486,0.8633846186255463,1.0,0.8633846186255463,
+exp5_initial,native,landscapes,penguin,0,0,13,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,native,landscapes,other_bird,0,0,9945674,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,native,landscapes,seal,0,0,1156799,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,native,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,resize,landscapes,background,81268199,77426657,0,3841542,0.9527300709592444,1.0,0.9527300709592444,
+exp5_initial,resize,landscapes,penguin,0,0,13352,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,resize,landscapes,other_bird,0,0,3480612,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,resize,landscapes,seal,0,0,347578,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,union,landscapes,background,81268199,69677356,0,11590843,0.8573754169204612,1.0,0.8573754169204612,
+exp5_initial,union,landscapes,penguin,0,0,1597,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,union,landscapes,other_bird,0,0,10970571,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,union,landscapes,seal,0,0,618675,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_initial,union,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,native,all,background,130485925,122308939,2596131,8176986,0.9190490639850049,0.979215167166553,0.9373343446812367,
+exp5_tuned,native,all,penguin,7752514,2712309,269195,5040205,0.3381210911540172,0.9097116757180269,0.3498618641643214,
+exp5_tuned,native,all,other_bird,0,0,3838121,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,native,all,seal,0,0,5710463,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,native,all,whale,0,0,803281,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,native,penguin_photos,background,49217726,47762831,2596131,1454895,0.921815779898416,0.9484474878572755,0.9704396135652428,
+exp5_tuned,native,penguin_photos,penguin,7752514,2712309,269195,5040205,0.3381210911540172,0.9097116757180269,0.3498618641643214,
+exp5_tuned,native,penguin_photos,other_bird,0,0,1943355,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,native,penguin_photos,seal,0,0,955171,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,native,penguin_photos,whale,0,0,731248,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,resize,all,background,130485925,125257997,1949349,5227928,0.9458053977371618,0.9846758142411052,0.959934927847582,
+exp5_tuned,resize,all,penguin,7752514,5425326,130557,2327188,0.688224931628803,0.9765011250236911,0.6998150535426315,
+exp5_tuned,resize,all,other_bird,0,0,5417795,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,resize,all,seal,0,0,57415,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,resize,penguin_photos,background,49217726,49079998,1949349,137728,0.9592105470168072,0.9617994523817833,0.997201658605682,
+exp5_tuned,resize,penguin_photos,penguin,7752514,5425326,130557,2327188,0.688224931628803,0.9765011250236911,0.6998150535426315,
+exp5_tuned,resize,penguin_photos,other_bird,0,0,385010,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,union,all,background,130485925,119775398,517738,10710527,0.9142904500311567,0.9956960304035968,0.9179181432786716,
+exp5_tuned,union,all,penguin,7752514,5966873,332768,1785641,0.737991946353881,0.9471766724484776,0.7696694259436359,
+exp5_tuned,union,all,other_bird,0,0,5842270,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,union,all,seal,0,0,5131639,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,union,all,whale,0,0,671753,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,union,penguin_photos,background,49217726,47700937,517738,1516789,0.9590930326899132,0.9892627078616324,0.9691820585128211,
+exp5_tuned,union,penguin_photos,penguin,7752514,5966873,332768,1785641,0.737991946353881,0.9471766724484776,0.7696694259436359,
+exp5_tuned,union,penguin_photos,other_bird,0,0,1036997,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,union,penguin_photos,seal,0,0,815117,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,union,penguin_photos,whale,0,0,599810,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,native,landscapes,background,81268199,74546108,0,6722091,0.917285099427391,1.0,0.917285099427391,
+exp5_tuned,native,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,native,landscapes,other_bird,0,0,1894766,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,native,landscapes,seal,0,0,4755292,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,native,landscapes,whale,0,0,72033,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,resize,landscapes,background,81268199,76177999,0,5090200,0.9373654139917632,1.0,0.9373654139917632,
+exp5_tuned,resize,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,resize,landscapes,other_bird,0,0,5032785,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,resize,landscapes,seal,0,0,57415,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,union,landscapes,background,81268199,72074461,0,9193738,0.8868716408985512,1.0,0.8868716408985512,
+exp5_tuned,union,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,union,landscapes,other_bird,0,0,4805273,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,union,landscapes,seal,0,0,4316522,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp5_tuned,union,landscapes,whale,0,0,71943,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,native,all,background,130485925,94385268,870210,36100657,0.7185448018853478,0.9908644624091856,0.723336773678847,
+exp7_normal,native,all,penguin,7752514,3145392,324772,4607122,0.38941198813561884,0.9064101869537001,0.4057254201669291,
+exp7_normal,native,all,other_bird,0,0,29534083,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,native,all,seal,0,0,6018866,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,native,all,whale,0,0,3959848,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,native,penguin_photos,background,49217726,25434957,870210,23782769,0.5078060513413849,0.9669186665874426,0.5167844812659569,
+exp7_normal,native,penguin_photos,penguin,7752514,3145392,321375,4607122,0.3895758289468681,0.9072983560764251,0.4057254201669291,
+exp7_normal,native,penguin_photos,other_bird,0,0,22549264,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,native,penguin_photos,seal,0,0,696572,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,native,penguin_photos,whale,0,0,3952470,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,resize,all,background,130485925,128980654,1231896,1505271,0.9792194634012356,0.9905393450938484,0.9884641121255032,
+exp7_normal,resize,all,penguin,7752514,6520618,212789,1231896,0.8186277408404928,0.9683980190117722,0.8410972234297158,
+exp7_normal,resize,all,other_bird,0,0,42293,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,resize,all,seal,0,0,1250189,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,resize,penguin_photos,background,49217726,49007866,1231896,209860,0.9714218671450106,0.9754796609108141,0.9957360890667724,
+exp7_normal,resize,penguin_photos,penguin,7752514,6520618,209860,1231896,0.8189288772418879,0.9688194508621825,0.8410972234297158,
+exp7_normal,resize,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,union,all,background,130485925,93703983,388251,36781942,0.7159852758117843,0.9958737189723862,0.7181156358434827,
+exp7_normal,union,all,penguin,7752514,6215626,459369,1536888,0.7569063027322722,0.9311806226072079,0.8017561787053851,
+exp7_normal,union,all,other_bird,0,0,26962694,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,union,all,seal,0,0,6563098,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,union,all,whale,0,0,3945418,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,union,penguin_photos,background,49217726,25315424,388251,23902302,0.5103301160664571,0.984895117137919,0.5143558237534176,
+exp7_normal,union,penguin_photos,penguin,7752514,6215626,453043,1536888,0.7574898328047688,0.9320639545912385,0.8017561787053851,
+exp7_normal,union,penguin_photos,other_bird,0,0,20084390,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,union,penguin_photos,seal,0,0,575466,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,union,penguin_photos,whale,0,0,3938040,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,native,landscapes,background,81268199,68950311,0,12317888,0.8484291746147838,1.0,0.8484291746147838,
+exp7_normal,native,landscapes,penguin,0,0,3397,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,native,landscapes,other_bird,0,0,6984819,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,native,landscapes,seal,0,0,5322294,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,native,landscapes,whale,0,0,7378,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,resize,landscapes,background,81268199,79972788,0,1295411,0.9840600503525371,1.0,0.9840600503525371,
+exp7_normal,resize,landscapes,penguin,0,0,2929,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,resize,landscapes,other_bird,0,0,42293,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,resize,landscapes,seal,0,0,1250189,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,union,landscapes,background,81268199,68388559,0,12879640,0.841516852120717,1.0,0.841516852120717,
+exp7_normal,union,landscapes,penguin,0,0,6326,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,union,landscapes,other_bird,0,0,6878304,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,union,landscapes,seal,0,0,5987632,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_normal,union,landscapes,whale,0,0,7378,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,native,all,background,130485925,124133787,2485127,6352138,0.9335399331878641,0.9803731771068578,0.9513193626055837,
+exp7_frozen_stats,native,all,penguin,7752514,2470013,189308,5282501,0.3110133921409974,0.928813407633001,0.3186080025137652,
+exp7_frozen_stats,native,all,other_bird,0,0,3850296,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,native,all,seal,0,0,4735230,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,native,all,whale,0,0,374678,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,native,penguin_photos,background,49217726,48726857,2485127,490869,0.9424403910554027,0.95147372146332,0.9900265810736563,
+exp7_frozen_stats,native,penguin_photos,penguin,7752514,2470013,189308,5282501,0.3110133921409974,0.928813407633001,0.3186080025137652,
+exp7_frozen_stats,native,penguin_photos,other_bird,0,0,2721649,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,native,penguin_photos,seal,0,0,102878,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,native,penguin_photos,whale,0,0,274408,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,resize,all,background,130485925,125754085,2590104,4731840,0.9449792419038894,0.9798190785248563,0.9637367785069539,
+exp7_frozen_stats,resize,all,penguin,7752514,5162410,16456,2590104,0.664490917071375,0.9968224704018216,0.6659014095298634,
+exp7_frozen_stats,resize,all,other_bird,0,0,4715384,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,resize,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,resize,penguin_photos,background,49217726,49201270,2590104,16456,0.9496879139697609,0.9499896643020129,0.9996656489168151,
+exp7_frozen_stats,resize,penguin_photos,penguin,7752514,5162410,16456,2590104,0.664490917071375,0.9968224704018216,0.6659014095298634,
+exp7_frozen_stats,resize,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,union,all,background,130485925,122920344,1271602,7565581,0.9329284390712645,0.9897609946461423,0.9420199458294065,
+exp7_frozen_stats,union,all,penguin,7752514,5815090,193090,1937424,0.7318625494046771,0.9678621479383108,0.7500908737475354,
+exp7_frozen_stats,union,all,other_bird,0,0,3657512,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,union,all,seal,0,0,4246750,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,union,all,whale,0,0,134051,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,union,penguin_photos,background,49217726,48723376,1271602,494350,0.965023261945574,0.9745654053493132,0.9899558545228196,
+exp7_frozen_stats,union,penguin_photos,penguin,7752514,5815090,193090,1937424,0.7318625494046771,0.9678621479383108,0.7500908737475354,
+exp7_frozen_stats,union,penguin_photos,other_bird,0,0,860289,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,union,penguin_photos,seal,0,0,73012,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,union,penguin_photos,whale,0,0,33781,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,native,landscapes,background,81268199,75406930,0,5861269,0.9278774591768669,1.0,0.9278774591768669,
+exp7_frozen_stats,native,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,native,landscapes,other_bird,0,0,1128647,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,native,landscapes,seal,0,0,4632352,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,native,landscapes,whale,0,0,100270,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,resize,landscapes,background,81268199,76552815,0,4715384,0.9419775009410507,1.0,0.9419775009410507,
+exp7_frozen_stats,resize,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,resize,landscapes,other_bird,0,0,4715384,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,resize,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,union,landscapes,background,81268199,74196968,0,7071231,0.9129889540187792,1.0,0.9129889540187792,
+exp7_frozen_stats,union,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,union,landscapes,other_bird,0,0,2797223,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,union,landscapes,seal,0,0,4173738,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp7_frozen_stats,union,landscapes,whale,0,0,100270,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,native,all,background,130485925,112053374,1651970,18432551,0.8480033225896326,0.9854714832048703,0.8587391628637342,
+exp8_kernel5,native,all,penguin,7752514,2962313,238401,4790201,0.3707101126717028,0.9255163066740734,0.3821099839355337,
+exp8_kernel5,native,all,other_bird,0,0,19916335,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,native,all,seal,0,0,795755,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,native,all,whale,0,0,620291,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,native,penguin_photos,background,49217726,42956527,1651970,6261199,0.8444423768524192,0.9629673691987426,0.8727856910739842,
+exp8_kernel5,native,penguin_photos,penguin,7752514,2962313,236985,4790201,0.3707758146036441,0.9259259375025396,0.3821099839355337,
+exp8_kernel5,native,penguin_photos,other_bird,0,0,8510938,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,native,penguin_photos,seal,0,0,234526,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,native,penguin_photos,whale,0,0,416981,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,resize,all,background,130485925,127215326,1280414,3270599,0.9654614901306471,0.9900353583706355,0.9749352353520121,
+exp8_kernel5,resize,all,penguin,7752514,6472100,188235,1280414,0.8150490589741597,0.9717379080781973,0.8348388664631886,
+exp8_kernel5,resize,all,other_bird,0,0,3025987,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,resize,all,seal,0,0,56377,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,resize,penguin_photos,background,49217726,49029491,1280414,188235,0.9709167703998602,0.9745494649612239,0.9961754632873531,
+exp8_kernel5,resize,penguin_photos,penguin,7752514,6472100,188235,1280414,0.8150490589741597,0.9717379080781973,0.8348388664631886,
+exp8_kernel5,resize,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,union,all,background,130485925,111742608,351168,18743317,0.8540590855224826,0.9968671944818774,0.8563575573380807,
+exp8_kernel5,union,all,penguin,7752514,6772263,370555,980251,0.8337074324987268,0.9481220157086461,0.873557016472334,
+exp8_kernel5,union,all,other_bird,0,0,17979372,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,union,all,seal,0,0,754034,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,union,all,whale,0,0,268439,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,union,penguin_photos,background,49217726,42827580,351168,6390146,0.8640011213484005,0.9918671101811475,0.8701657610105757,
+exp8_kernel5,union,penguin_photos,penguin,7752514,6772263,369139,980251,0.8338527883424717,0.9483100097151792,0.873557016472334,
+exp8_kernel5,union,penguin_photos,other_bird,0,0,6392088,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,union,penguin_photos,seal,0,0,190057,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,union,penguin_photos,whale,0,0,67945,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,native,landscapes,background,81268199,69096847,0,12171352,0.8502322907389642,1.0,0.8502322907389642,
+exp8_kernel5,native,landscapes,penguin,0,0,1416,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,native,landscapes,other_bird,0,0,11405397,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,native,landscapes,seal,0,0,561229,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,native,landscapes,whale,0,0,203310,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,resize,landscapes,background,81268199,78185835,0,3082364,0.9620717077783402,1.0,0.9620717077783402,
+exp8_kernel5,resize,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,resize,landscapes,other_bird,0,0,3025987,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,resize,landscapes,seal,0,0,56377,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,union,landscapes,background,81268199,68915028,0,12353171,0.847995019552482,1.0,0.847995019552482,
+exp8_kernel5,union,landscapes,penguin,0,0,1416,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,union,landscapes,other_bird,0,0,11587284,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,union,landscapes,seal,0,0,563977,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel5,union,landscapes,whale,0,0,200494,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,native,all,background,130485925,39311923,2171974,91174002,0.29634061217869884,0.9476429613158088,0.30127328292304323,
+exp8_kernel7,native,all,penguin,7752514,1255416,40819,6497098,0.16108845855810344,0.9685095680952913,0.16193663113668677,
+exp8_kernel7,native,all,other_bird,0,0,23002624,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,native,all,seal,0,0,55951135,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,native,all,whale,0,0,16504548,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,native,penguin_photos,background,49217726,15329972,2171974,33887754,0.2983082602155685,0.8759009998088213,0.3114725779894829,
+exp8_kernel7,native,penguin_photos,penguin,7752514,1255416,40819,6497098,0.16108845855810344,0.9685095680952913,0.16193663113668677,
+exp8_kernel7,native,penguin_photos,other_bird,0,0,6306432,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,native,penguin_photos,seal,0,0,18752377,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,native,penguin_photos,whale,0,0,13113250,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,resize,all,background,130485925,124679083,3185326,5806842,0.9327292298625978,0.9750882514930328,0.9554983267352398,
+exp8_kernel7,resize,all,penguin,7752514,3136226,12242,4616288,0.40390528691436023,0.9961117597510917,0.4045430940208557,
+exp8_kernel7,resize,all,other_bird,0,0,7225562,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,resize,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,resize,penguin_photos,background,49217726,49181934,3185326,35792,0.9385318626098342,0.9391733308177667,0.9992727823304961,
+exp8_kernel7,resize,penguin_photos,penguin,7752514,3136226,12242,4616288,0.40390528691436023,0.9961117597510917,0.4045430940208557,
+exp8_kernel7,resize,penguin_photos,other_bird,0,0,1454512,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,union,all,background,130485925,39088639,1741766,91397286,0.2956161353524656,0.9573414468947834,0.2995621098597416,
+exp8_kernel7,union,all,penguin,7752514,2175177,46591,5577337,0.27890084823835554,0.979029763683697,0.28057698444659374,
+exp8_kernel7,union,all,other_bird,0,0,23405497,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,union,all,seal,0,0,55332791,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,union,all,whale,0,0,16447978,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,union,penguin_photos,background,49217726,15311004,1741766,33906722,0.30045440798350187,0.897860230332081,0.31108718838412,
+exp8_kernel7,union,penguin_photos,penguin,7752514,2175177,46591,5577337,0.27890084823835554,0.979029763683697,0.28057698444659374,
+exp8_kernel7,union,penguin_photos,other_bird,0,0,6000899,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,union,penguin_photos,seal,0,0,18637541,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,union,penguin_photos,whale,0,0,13057262,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,native,landscapes,background,81268199,23981951,0,57286248,0.2950963758899099,1.0,0.2950963758899099,
+exp8_kernel7,native,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,native,landscapes,other_bird,0,0,16696192,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,native,landscapes,seal,0,0,37198758,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,native,landscapes,whale,0,0,3391298,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,resize,landscapes,background,81268199,75497149,0,5771050,0.9289875982116941,1.0,0.9289875982116941,
+exp8_kernel7,resize,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,resize,landscapes,other_bird,0,0,5771050,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,resize,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,union,landscapes,background,81268199,23777635,0,57490564,0.2925822805547838,1.0,0.2925822805547838,
+exp8_kernel7,union,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,union,landscapes,other_bird,0,0,17404598,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,union,landscapes,seal,0,0,36695250,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp8_kernel7,union,landscapes,whale,0,0,3390716,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,native,all,background,130485925,110799086,1563873,19686839,0.8390704694603168,0.9860819525053626,0.8491267238209792,
+exp10_best,native,all,penguin,7752514,2645455,165785,5107059,0.33409385020696997,0.9410278026778219,0.3412383389439864,
+exp10_best,native,all,other_bird,0,0,7271325,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,native,all,seal,0,0,14374495,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,native,all,whale,0,0,1418420,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,native,penguin_photos,background,49217726,42097812,1563873,7119914,0.8289973696968463,0.964182028247421,0.8553384201456199,
+exp10_best,native,penguin_photos,penguin,7752514,2645455,161477,5107059,0.3342757149963906,0.9424720655861988,0.3412383389439864,
+exp10_best,native,penguin_photos,other_bird,0,0,3561307,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,native,penguin_photos,seal,0,0,5726313,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,native,penguin_photos,whale,0,0,1214003,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,resize,all,background,130485925,125437992,2281043,5047933,0.9447981970937229,0.9821401484907868,0.9613143486548453,
+exp10_best,resize,all,penguin,7752514,5471471,79736,2281043,0.6985822720163427,0.9856362769394116,0.7057673162537984,
+exp10_best,resize,all,other_bird,0,0,4968197,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,resize,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,resize,penguin_photos,background,49217726,49137990,2281043,79736,0.9541585353234365,0.9556381583449848,0.9983799332785103,
+exp10_best,resize,penguin_photos,penguin,7752514,5471471,79736,2281043,0.6985822720163427,0.9856362769394116,0.7057673162537984,
+exp10_best,resize,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,union,all,background,130485925,109874995,974496,20610930,0.8358028535447943,0.9912088364934396,0.8420448029164831,
+exp10_best,union,all,penguin,7752514,5522541,199195,2229973,0.6945099474842452,0.9651862651475007,0.7123548567600136,
+exp10_best,union,all,other_bird,0,0,6817169,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,union,all,seal,0,0,13805158,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,union,all,whale,0,0,1044885,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,union,penguin_photos,background,49217726,42071285,974496,7146441,0.8382032777907302,0.9773614050584888,0.8547994476624133,
+exp10_best,union,penguin_photos,penguin,7752514,5522541,194887,2229973,0.694886416326545,0.9659135191558162,0.7123548567600136,
+exp10_best,union,penguin_photos,other_bird,0,0,2150094,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,union,penguin_photos,seal,0,0,5216469,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,union,penguin_photos,whale,0,0,840468,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,native,landscapes,background,81268199,68701274,0,12566925,0.8453647902299397,1.0,0.8453647902299397,
+exp10_best,native,landscapes,penguin,0,0,4308,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,native,landscapes,other_bird,0,0,3710018,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,native,landscapes,seal,0,0,8648182,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,native,landscapes,whale,0,0,204417,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,resize,landscapes,background,81268199,76300002,0,4968197,0.9388666531172913,1.0,0.9388666531172913,
+exp10_best,resize,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,resize,landscapes,other_bird,0,0,4968197,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,resize,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,union,landscapes,background,81268199,67803710,0,13464489,0.8343203225163142,1.0,0.8343203225163142,
+exp10_best,union,landscapes,penguin,0,0,4308,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,union,landscapes,other_bird,0,0,4667075,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,union,landscapes,seal,0,0,8588689,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp10_best,union,landscapes,whale,0,0,204417,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,native,all,background,130485925,102605557,1183296,27880368,0.7792675936010892,0.9885990068702272,0.7863342885449139,
+exp11_best,native,all,penguin,7752514,2702065,150445,5050449,0.34190548122544984,0.9472587300307449,0.34854048635062124,
+exp11_best,native,all,other_bird,0,0,27828705,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,native,all,seal,0,0,3165863,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,native,all,whale,0,0,602508,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,native,penguin_photos,background,49217726,38884389,1183296,10333337,0.7715000104561371,0.970467572558784,0.790048467497259,
+exp11_best,native,penguin_photos,penguin,7752514,2702065,149946,5050449,0.34192707081086143,0.9474244664554239,0.34854048635062124,
+exp11_best,native,penguin_photos,other_bird,0,0,13284613,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,native,penguin_photos,seal,0,0,201364,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,native,penguin_photos,whale,0,0,564567,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,resize,all,background,130485925,130246363,1857861,239562,0.9841517077348838,0.985936399732381,0.9981640778497758,
+exp11_best,resize,all,penguin,7752514,5894653,24081,1857861,0.7579992271681887,0.9959313934365018,0.7603537381551326,
+exp11_best,resize,all,other_bird,0,0,202438,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,resize,all,seal,0,0,13043,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,resize,penguin_photos,background,49217726,49193645,1857861,24081,0.9631537861718554,0.9636081058999513,0.9995107250586912,
+exp11_best,resize,penguin_photos,penguin,7752514,5894653,24081,1857861,0.7579992271681887,0.9959313934365018,0.7603537381551326,
+exp11_best,resize,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,union,all,background,130485925,102582070,600235,27903855,0.7825545427526445,0.9941827719394328,0.7861542921200122,
+exp11_best,union,all,penguin,7752514,5918905,173905,1833609,0.7467312792826117,0.9714573407015811,0.7634820137054896,
+exp11_best,union,all,other_bird,0,0,25486939,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,union,all,seal,0,0,3105013,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,union,all,whale,0,0,371372,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,union,penguin_photos,background,49217726,38860929,600235,10356797,0.7800586017561015,0.9847892221324237,0.7895718099613135,
+exp11_best,union,penguin_photos,penguin,7752514,5918905,173406,1833609,0.7467782919837697,0.9715369093928395,0.7634820137054896,
+exp11_best,union,penguin_photos,other_bird,0,0,10935213,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,union,penguin_photos,seal,0,0,148121,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,union,penguin_photos,whale,0,0,333431,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,native,landscapes,background,81268199,63721168,0,17547031,0.7840849038625798,1.0,0.7840849038625798,
+exp11_best,native,landscapes,penguin,0,0,499,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,native,landscapes,other_bird,0,0,14544092,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,native,landscapes,seal,0,0,2964499,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,native,landscapes,whale,0,0,37941,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,resize,landscapes,background,81268199,81052718,0,215481,0.9973485200527208,1.0,0.9973485200527208,
+exp11_best,resize,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,resize,landscapes,other_bird,0,0,202438,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,resize,landscapes,seal,0,0,13043,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,union,landscapes,background,81268199,63721141,0,17547058,0.7840845716293036,1.0,0.7840845716293036,
+exp11_best,union,landscapes,penguin,0,0,499,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,union,landscapes,other_bird,0,0,14551726,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,union,landscapes,seal,0,0,2956892,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp11_best,union,landscapes,whale,0,0,37941,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,native,all,background,130485925,120088499,2866374,10397426,0.9005356480580811,0.9766875933416644,0.9203176434546485,
+exp12_best,native,all,penguin,7752514,1141325,19087,6611189,0.14685841437304875,0.9835515316973626,0.14721998567174469,
+exp12_best,native,all,other_bird,0,0,5722430,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,native,all,seal,0,0,6195189,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,native,all,whale,0,0,2205535,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,native,penguin_photos,background,49217726,46155314,2866374,3062412,0.8861689843925498,0.9415284516518485,0.9377782711862795,
+exp12_best,native,penguin_photos,penguin,7752514,1141325,15872,6611189,0.1469191927383629,0.9862840985588452,0.14721998567174469,
+exp12_best,native,penguin_photos,other_bird,0,0,3254186,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,native,penguin_photos,seal,0,0,2161453,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,native,penguin_photos,whale,0,0,1375716,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,resize,all,background,130485925,130485925,7752514,0,0.9439192596785616,0.9439192596785616,1.0,
+exp12_best,resize,all,penguin,7752514,0,0,7752514,0.0,,0.0,
+exp12_best,resize,all,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,resize,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,resize,penguin_photos,background,49217726,49217726,7752514,0,0.8639199343376471,0.8639199343376471,1.0,
+exp12_best,resize,penguin_photos,penguin,7752514,0,0,7752514,0.0,,0.0,
+exp12_best,resize,penguin_photos,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,union,all,background,130485925,120088499,2866374,10397426,0.9005356480580811,0.9766875933416644,0.9203176434546485,
+exp12_best,union,all,penguin,7752514,1141325,19087,6611189,0.14685841437304875,0.9835515316973626,0.14721998567174469,
+exp12_best,union,all,other_bird,0,0,5722430,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,union,all,seal,0,0,6195189,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,union,all,whale,0,0,2205535,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,union,penguin_photos,background,49217726,46155314,2866374,3062412,0.8861689843925498,0.9415284516518485,0.9377782711862795,
+exp12_best,union,penguin_photos,penguin,7752514,1141325,15872,6611189,0.1469191927383629,0.9862840985588452,0.14721998567174469,
+exp12_best,union,penguin_photos,other_bird,0,0,3254186,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,union,penguin_photos,seal,0,0,2161453,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,union,penguin_photos,whale,0,0,1375716,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,native,landscapes,background,81268199,73933185,0,7335014,0.9097431210454165,1.0,0.9097431210454165,
+exp12_best,native,landscapes,penguin,0,0,3215,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,native,landscapes,other_bird,0,0,2468244,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,native,landscapes,seal,0,0,4033736,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,native,landscapes,whale,0,0,829819,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,resize,landscapes,background,81268199,81268199,0,0,1.0,1.0,1.0,
+exp12_best,resize,landscapes,penguin,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,resize,landscapes,other_bird,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,resize,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,union,landscapes,background,81268199,73933185,0,7335014,0.9097431210454165,1.0,0.9097431210454165,
+exp12_best,union,landscapes,penguin,0,0,3215,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,union,landscapes,other_bird,0,0,2468244,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,union,landscapes,seal,0,0,4033736,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_best,union,landscapes,whale,0,0,829819,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,native,all,background,130485925,120373308,1973775,10112617,0.9087541946720399,0.9838674126787313,0.9225003233107325,
+exp12_final,native,all,penguin,7752514,5599852,9137731,2152662,0.33154356257117645,0.37997085410816683,0.7223272347524945,
+exp12_final,native,all,other_bird,0,0,1153527,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,native,all,seal,0,0,246,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,native,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,native,penguin_photos,background,49217726,44667707,1973775,4550019,0.8725609940603226,0.9576819836042088,0.9075532461617589,
+exp12_final,native,penguin_photos,penguin,7752514,5599852,4189952,2152662,0.46890248630391745,0.5720085917961176,0.7223272347524945,
+exp12_final,native,penguin_photos,other_bird,0,0,538954,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,native,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,native,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,resize,all,background,130485925,126024302,3547352,4461623,0.9402463688177974,0.972622468800159,0.965807630209925,
+exp12_final,resize,all,penguin,7752514,4151315,4417363,3601199,0.3411139652438558,0.48447555153782185,0.5354798456345903,
+exp12_final,resize,all,other_bird,0,0,98107,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,resize,all,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,resize,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,resize,penguin_photos,background,49217726,49212890,3547352,4836,0.932679186032853,0.9327646753401927,0.9999017427176542,
+exp12_final,resize,penguin_photos,penguin,7752514,4151315,4192,3601199,0.5351904532671472,0.9989912181594207,0.5354798456345903,
+exp12_final,resize,penguin_photos,other_bird,0,0,54491,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,resize,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,resize,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,union,all,background,130485925,118676873,1271514,11809052,0.9007223721159304,0.9893994906325835,0.9094994191902307,
+exp12_final,union,all,penguin,7752514,6303691,10812007,1448823,0.3395558118628539,0.3682987979806608,0.8131157196233376,
+exp12_final,union,all,other_bird,0,0,1174188,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,union,all,seal,0,0,166,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,union,all,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,union,penguin_photos,background,49217726,44665654,1271514,4552072,0.8846568892698722,0.9723205836284902,0.9075115335478929,
+exp12_final,union,penguin_photos,penguin,7752514,6303691,4191361,1448823,0.5277760358342665,0.6006345656981976,0.8131157196233376,
+exp12_final,union,penguin_photos,other_bird,0,0,538020,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,union,penguin_photos,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,union,penguin_photos,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,native,landscapes,background,81268199,75705601,0,5562598,0.9315525867627509,1.0,0.9315525867627509,
+exp12_final,native,landscapes,penguin,0,0,4947779,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,native,landscapes,other_bird,0,0,614573,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,native,landscapes,seal,0,0,246,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,native,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,resize,landscapes,background,81268199,76811412,0,4456787,0.9451595205155217,1.0,0.9451595205155217,
+exp12_final,resize,landscapes,penguin,0,0,4413171,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,resize,landscapes,other_bird,0,0,43616,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,resize,landscapes,seal,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,resize,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,union,landscapes,background,81268199,74011219,0,7256980,0.910703324433214,1.0,0.910703324433214,
+exp12_final,union,landscapes,penguin,0,0,6620646,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,union,landscapes,other_bird,0,0,636168,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,union,landscapes,seal,0,0,166,0,0.0,0.0,,Absent positive class: recall undefined; any prediction is a false positive
+exp12_final,union,landscapes,whale,0,0,0,0,,,,Absent positive class: recall undefined; any prediction is a false positive

@@ -1,0 +1,14 @@
+﻿experiment,title,status,report,reference_version,first_protocol,first_protocol_mean_photo_iou,first_protocol_landscape_fp,key_result
+1,Sliding windows and image resize,completed,reports/exp01/README.md,benchmark_v2,Tiles 640/480,0.47992280180584723,0.003307480703491411,Tiles / stretch resize mean photo IoU: 47.99% / 69.23%
+2,Single probability fusion,completed,reports/exp02/README.md,benchmark_v2,Fusion alpha .6,0.725289985399015,0.047680975432961174,Alpha .6 mean photo IoU: 72.53%
+3,Union of two biased fusions,completed,reports/exp03/README.md,benchmark_v2,Dual union .2/.8,0.8266293370118304,0.0572486539291956,Dual union mean photo IoU: 82.66%; landscape FP: 5.72%
+4,Original-resolution direct inference,completed,reports/exp04/README.md,benchmark_v2,Native,0.552479946623516,0.005075749248485253,Native mean photo IoU: 55.25%
+5,Five-class baseline and tuned configuration,completed,reports/exp05/README.md,benchmark_v2,Original,0.000650885290139241,0.04726992904075553,Original / tuned historical animal mIoU: 14.60% / 78.39%
+6,Batch size and throughput,historical_resource_test,reports/exp06/README.md,not_applicable,,,,Selected batch 6; 36.92 images/s; 2.72 GiB peak allocated (historical)
+7,BatchNorm policy comparison,completed,reports/exp07/README.md,benchmark_v2,Normal BN,0.7579510293663785,0.015939949647462964,Normal / frozen historical animal mIoU: 83.56% / 82.79%
+8,Larger convolution kernels,completed,reports/exp08/README.md,benchmark_v2,3x3,0.7579510293663785,0.015939949647462964,3x3 / 5x5 / 7x7 historical animal mIoU: 83.56% / 84.62% / 79.90%
+9,Native/resize foreground union,completed,reports/exp09/README.md,benchmark_v2,3x3 native,0.470339332804471,0.15157082538521618,Foreground union retains false positives from either branch; see matched method table
+10,Explicit background supervision,completed,reports/exp10/README.md,benchmark_v2,Baseline resize,0.7523352638722777,0.03792829222165979,Baseline / background historical animal mIoU: 84.62% / 83.28%
+11,Penguin-weighted replay,completed,reports/exp11/README.md,benchmark_v2,Native,0.4249067942852542,0.21591509613742024,Historical animal mIoU: 86.94%; native/resize/union photo errors measured separately
+12,Sequential training without replay,completed,reports/exp12/README.md,benchmark_v2,Overall best resize,0.0,0.0,Best / final historical animal mIoU: 30.44% / 6.89%
+13,Alternative sequential schedule,not_run,reports/exp13/README.md,not_applicable,,,,Not run; no measured result
