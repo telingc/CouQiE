@@ -22,4 +22,4 @@ An auxiliary distant-point check uses 16 visible penguin body centers selected f
 
 The images were used to design the inference methods and reference masks. Treat the set as development evaluation. The reference provenance and file hashes remain frozen; future edits should create a new benchmark version rather than silently changing this version.
 
-[Annotation editor instructions](README.md) | [All reports](../README.md)
+[Reference provenance](README.md) | [All reports](../README.md)

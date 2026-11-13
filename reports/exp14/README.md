@@ -49,6 +49,6 @@ Completed 75/75 configurations. Failed settings retain their names and reasons; 
 Native uses different original sizes, so it is not included in the resized-resolution Pareto ordering. Device/precision records must be considered when reading timings.
 These model-assisted development references are not a blind independent test. No inference threshold, fusion, model structure or weights were tuned. Results cannot be attributed directly to a kernel size or crop boundary.
 
-Full 15-image HTML gallery and class masks: `E:\workspace\pyscripts\semseg\artifacts\experiments\exp14_results\run_20261111_175034\gallery.html`. NJU is visualization only, and all NJU pixels remain under ignored artifacts storage.
+Full 15-image HTML gallery and class masks: `artifacts/experiments/exp14_results/run_20261111_175034/gallery.html`. NJU is visualization only, and all NJU pixels remain under ignored artifacts storage.
 
 Reference protocol: unchanged benchmark_v2; near and far include model-assisted annotations. This is a fixed-weight scale diagnosis, not independent blind-test accuracy or a kernel/boundary causal ablation.

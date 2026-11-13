@@ -4,3 +4,23 @@
 **/.ipynb_checkpoints/
 *.pyc
 *.tmp
+/submission/
+# Private course packages, model parameters and local environment files.
+*.zip
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pdf
+*.aux
+*.log
+*.out
+*.toc
+.venv/
+venv/
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

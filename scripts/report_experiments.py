@@ -341,6 +341,11 @@ class Reports:
             self.index.append(dict(experiment=14,title='Inference Scale Sensitivity',
                 status='completed' if scale_result['status']=='complete' else scale_result['status'],
                 report='reports/exp14/README.md',reference_version='benchmark_v2'))
+        # Preserve later finalized reports; this historical builder never retrains them.
+        for number,title,status,reference in [(15,'Five-class source baseline and proposed target adaptation','stage_a_complete_stage_b_not_run','frozen_target_split'),
+                (16,'Six-group sampling with Antarctic background supervision','completed_group_b','SAM3_private_validation')]:
+            if (ROOT/f'reports/exp{number}/README.md').is_file():
+                self.index.append(dict(experiment=number,title=title,status=status,report=f'reports/exp{number}/README.md',reference_version=reference))
 
     def reference_report(self):
         folder=ROOT/'reports/references'
@@ -373,7 +378,9 @@ class Reports:
             11:f"Historical animal mIoU: {hist('exp11_best')}; native/resize/union photo errors measured separately",
             12:f"Best / final historical animal mIoU: {hist('exp12_best')} / {hist('exp12_final')}",
             13:'Separate four-class baseline; see its own metrics, not a whale-only ablation',
-            14:'Fixed experiment-13 weights; 75 float32 scale cases; see per-image diagnostics'}
+            14:'Fixed experiment-13 weights; 75 float32 scale cases; see per-image diagnostics',
+            15:'Source stage A completed; proposed foreground-label target fine-tuning not run',
+            16:'Group B only; 10 epochs, selected epoch 6; private SAM3-reference mIoU 43.73%; fixed 960 inference'}
         for row in self.index:row['key_result']=headlines[row['experiment']]
         write_csv(report_root/'index.csv',self.index)
         write_csv(report_root/'metrics.csv',self.rows)
@@ -410,7 +417,7 @@ class Reports:
         text+='\n\nHistorical binary/five-class comparison only: 640 letterbox resize, restored logits, original-resolution scoring. Resize uses AMP as recorded below. Experiments 13 and 14 have separate four-class reports; their results are not pooled into this table.\n\n'+self.score_table(matched)
         text+='\n\n![Development-reference overview](overview.jpg)\n\nThe chart and table use the same resize protocol for every model. Direct/resize/union comparisons are in the individual reports.\n\n'+COMMON
         text+='\n\n[Reference definitions](references/benchmark.md) | [All image and pooled metrics](metrics.csv) | [Per-class pixel counts](class_metrics.csv)\n'
-        text+='\n[Project closeout](CLOSEOUT.md) | [Code map](../CODE_MAP.md)\n\nFormal experiments stop at 14. The unnumbered experiment-10 scale preview was declined by the user and archived locally; it is excluded from this index.\n'
+        text+='\n[Project overview](../README.md) | [Dataset policy](../DATASETS.md)\n\nThe register contains experiments 1-16. E15 foreground-label fine-tuning was not run; E16 group B is the final five-class model. The declined unnumbered experiment-10 preview remains excluded.\n'
         (report_root/'README.md').write_text(text,encoding='utf-8')
 
 

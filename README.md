@@ -1,79 +1,93 @@
 # Antarctic Animal Segmentation
 
-The formal project closes at experiments **1-14**. The retained baseline is the
-four-class experiment-13 hand-written ResNet34 U-Net: background, penguin, other
-bird and seal. Experiment 14 diagnoses inference-scale sensitivity with those
-fixed weights. Historical binary and five-class experiments remain reproducible.
+A hand-written ResNet34 U-Net in PyTorch, with experiments on animal segmentation,
+training data, class confusion and inference scale. The model predicts background,
+penguin, other bird, seal and whale. Discussions, code and results preserve the
+distinction between labeled source validation and Antarctic-scene transfer.
 
-Start with [project closeout](reports/CLOSEOUT.md), [all experiment reports](reports/README.md),
-[code map](CODE_MAP.md), and [dataset policy](DATASETS.md).
+## Model and retained result
 
-| Location | Content | Git |
-|---|---|---|
-| scripts/ | Active model, data, experiment, reporting and checking code | Track |
-| launch.ipynb | Small launcher with explicit execution switches; no saved outputs or images | Track |
-| reports/ | English reports, metric CSVs and selected public figures | Track |
-| data/ | Original/prepared datasets, references and private NJU photos | Ignore |
-| artifacts/ | Checkpoints, full predictions, galleries, backups and rejected previews | Ignore |
+The encoder reuses ImageNet ResNet34 features. Four decoder blocks upsample,
+concatenate encoder skips and apply two Conv-BatchNorm-ReLU layers. A 1x1 head
+returns class logits at the original input size. The final model uses 3x3 decoder
+convolutions and the original 7x7 ResNet stem; the network accepts different
+spatial dimensions, although training uses 640 letterbox inputs.
 
-## Read and verify
+Experiment 16 group B is the retained five-class model: ten epochs, selected
+epoch 6, batch 6, fixed 960 letterbox float32 inference. It samples six groups,
+including Antarctic background-only images with animals/safety margins ignored.
 
-Open [launch.ipynb](launch.ipynb) from the project root in the existing Python
-environment. All execution switches default to False. Reports can be read without
-running the notebook or loading a model.
+| Evaluation | Foreground mIoU | Protocol |
+| --- | ---: | --- |
+| Source animals, 1,958 images | 84.60% | 640 / AMP |
+| Private validation, 25 images | 43.73% | 960 / float32 |
+| Same private validation, Native | 12.07% | Original dimensions / float32 |
+
+Private references are user-confirmed SAM3 annotations, not independently drawn
+human ground truth; they were used for checkpoint selection. Target bird IoU is
+only 1.06%. Source and private settings differ in resolution and precision as
+well as distribution. The results do not establish an isolated causal effect or
+a universally optimal inference scale. See [experiment 16](reports/exp16/README.md).
+
+![Public scale comparison](reports/exp16/public_overview.jpg)
+
+Rows: near penguin, distant penguins, landscape. Columns: RGB, 960, Native.
+Public-photo credits and licenses are listed in the experiment report. Course
+photographs, their predictions, weights and private reports are excluded from Git.
+
+## Experiments
+
+[All reports](reports/README.md) | [Metric index](reports/index.csv) |
+[Dataset definitions](DATASETS.md) | [Frozen development references](reports/references/benchmark.md)
+
+| Experiments | Question |
+| --- | --- |
+| 1-4 | Binary sliding windows, resize, probability fusion and Native inference |
+| 5-8 | Multiclass training, batch throughput, BatchNorm and convolution kernels |
+| 9-12 | Native/resize union, background supervision, replay and sequential training |
+| 13-14 | Four-class ImageNet restart and fixed-weight inference-scale sensitivity |
+| 15 | Five-class source restart; proposed target foreground fine-tuning was not run |
+| 16 | Six-group sampling with Antarctic background-only supervision; fixed 960 and Native |
+
+Four-class and five-class mIoU are not directly comparable. The nine-photo
+benchmark contains model-assisted development references; six unlabeled final
+course images support qualitative visualization only. Distant-center hits are
+exact-pixel diagnostics, not instance recall.
+
+## Source layout
+
+| Module | Role |
+| --- | --- |
+| `scripts/script.py` | ConvBlock, DecoderBlock, ResNetUNet, Trainer, metrics and paired mask transforms |
+| `scripts/animal_data.py` | Class definitions, prepared datasets, letterbox transforms and merged split reading |
+| `scripts/train_multiclass.py` | Shared training setup used by historical experiments |
+| `scripts/experiment1.py` ... `experiment16.py` | Recorded experiment entry points |
+| `scripts/experiment16_native.py` | Original-resolution five-class diagnosis with consumed tensors released early |
+| `scripts/experiment15_data.py`, `scripts/dataset_paths.py` | Frozen source/target audit and historical dataset-view compatibility |
+| `scripts/prepare_antarctic_background.py` | Whole-image background supervision with 255 animal/safety margins |
+| `scripts/reference_benchmark.py`, `scripts/evaluate_project.py` | Frozen-reference scoring and error diagnostics |
+| `scripts/report_experiments.py` | Historical report regeneration from saved masks/logs, without training |
+| `scripts/gallery.py`, `scripts/project_paths.py` | Shared prediction graphics, HTML galleries and project locations |
+| `launch.ipynb` | Small experiment launcher; execution switches default to false |
+| `reports/` | Public experimental summaries, metric tables and selected figures |
+
+## Run locally
+
+Use Python 3 with PyTorch/torchvision, NumPy, Pillow, Matplotlib, SciPy, pandas
+and psutil. Open `launch.ipynb` from the repository root. It reads existing
+reports without starting training, inference or downloads. Prepared datasets and
+checkpoints must be supplied locally before enabling their experiment switches;
+see [DATASETS.md](DATASETS.md). They are not part of this public repository.
+
+To inspect the final training configuration without executing it:
 
 ```powershell
-python scripts/check_project.py
-python scripts/check_project.py --local-results
+python scripts/experiment16.py
 ```
 
-The first command checks source syntax, local imports, documentation links, the
-formal index, notebook defaults and private-file tracking. The second also hashes
-local result sources and checks experiment-13/14 metadata. Neither command imports
-torch, trains, runs inference or downloads data.
-
-To regenerate reports from existing logs and saved predictions:
-
-```powershell
-python scripts/report_experiments.py
-```
-
-This redraws reports, including experiment-13 training curves; it does not run a
-network or edit launch.ipynb. Local data and artifact caches are required. The
-observed environment is recorded in [environment.json](reports/environment.json).
-The local interpreter used for completed runs is
-`E:\workspace\pyscripts\.venv\Scripts\python.exe`.
-
-## Retained results
-
-- [Experiment 13: four-class baseline and training curves](reports/exp13/README.md).
-- [Experiment 14: fixed-weight scale sensitivity](reports/exp14/README.md).
-- [Formal experiment index](reports/index.csv) and [historical comparison](reports/README.md).
-- [Frozen benchmark_v2 definitions](reports/references/benchmark.md).
-- [Reference review editor](reports/references/README.md).
-
-The nine-photo development benchmark contains three penguin references and six
-user-declared background landscapes. Some masks are model-assisted; these are not
-independent blind-test scores. Animal validation, natural-background validation,
-and development-photo metrics are separate. NJU has no manual masks here and is
-visualization only. Course photos and their visualizations stay in ignored storage.
-
-Four-class mIoU cannot be compared directly with historical five-class mIoU.
-Historical cross-model reports use their recorded AMP protocol; experiment 14 uses
-fresh float32 predictions. Scale sensitivity does not establish a universally best
-input resolution or a kernel-only causal effect.
-
-## Reproduction boundary
-
-Training and full inference remain available through explicit notebook switches
-and experiment APIs. Use new run directories when changing model/data settings;
-verify checkpoint, image, preprocessing and precision hashes before reusing caches.
-`reference_benchmark.py --rescore-only` rescales no images and scores saved class
-masks on the CPU; its bare command can run historical inference and is not needed
-for closeout. `prepare_datasets.py` and `download_nature.py` intentionally modify
-local data and are not part of routine verification.
-
-The unnumbered experiment-10 5x5 scale preview was declined and archived locally;
-it is not experiment 15. One-time migration tools were also archived. See
-[cleanup record](reports/cleanup.md). Checkpoints, source data, frozen reference
-masks and historical predictions are preserved.
+Use a new run directory for changed training settings. Exact historical resume
+requires the original source/configuration identities. Completed local outputs
+remain unchanged when public-source maintenance is performed. No training or
+inference starts on module import. Model/experiment code includes LLM-assistance
+annotations; report preparation and diagnostic utilities also received Codex
+assistance.

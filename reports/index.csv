@@ -1,4 +1,4 @@
-﻿experiment,title,status,report,reference_version,first_protocol,first_protocol_mean_photo_iou,first_protocol_landscape_fp,key_result
+experiment,title,status,report,reference_version,first_protocol,first_protocol_mean_photo_iou,first_protocol_landscape_fp,key_result
 1,Sliding windows and image resize,completed,reports/exp01/README.md,benchmark_v2,Tiles 640/480,0.47992280180584723,0.003307480703491411,Tiles / stretch resize mean photo IoU: 47.99% / 69.23%
 2,Single probability fusion,completed,reports/exp02/README.md,benchmark_v2,Fusion alpha .6,0.725289985399015,0.047680975432961174,Alpha .6 mean photo IoU: 72.53%
 3,Union of two biased fusions,completed,reports/exp03/README.md,benchmark_v2,Dual union .2/.8,0.8266293370118304,0.0572486539291956,Dual union mean photo IoU: 82.66%; landscape FP: 5.72%
@@ -13,3 +13,5 @@
 12,Sequential training without replay,completed,reports/exp12/README.md,benchmark_v2,Overall best resize,0.0,0.0,Best / final historical animal mIoU: 30.44% / 6.89%
 13,New four-class ImageNet baseline,completed,reports/exp13/README.md,benchmark_v2,,,,"Separate four-class baseline; see its own metrics, not a whale-only ablation"
 14,Inference Scale Sensitivity,completed,reports/exp14/README.md,benchmark_v2,,,,Fixed experiment-13 weights; 75 float32 scale cases; see per-image diagnostics
+15,Five-class baseline and proposed target adaptation,stage_a_complete_stage_b_not_run,reports/exp15/README.md,frozen_target_split,,,,Source stage A completed; target foreground-label fine-tuning not run
+16,Six-group sampling with Antarctic background supervision,completed_group_b,reports/exp16/README.md,SAM3_private_validation,,,,"Group B only, 10 epochs; private SAM3-reference mIoU 43.73%; fixed 960 inference"

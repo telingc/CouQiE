@@ -1,0 +1,435 @@
+{
+  "best_epoch": 6,
+  "private": {
+    "background": {
+      "iou": 0.9728787259553632,
+      "precision": 0.976124492465187,
+      "recall": 0.9965937891001592,
+      "dice": 0.9862529441430804,
+      "label_pixels": 570505191
+    },
+    "penguin": {
+      "iou": 0.642574084043175,
+      "precision": 0.973886384942039,
+      "recall": 0.6538396539106937,
+      "dice": 0.7823989070392334,
+      "label_pixels": 34065427
+    },
+    "other_bird": {
+      "iou": 0.010640585078785769,
+      "precision": 0.010784498832926993,
+      "recall": 0.4436333936056546,
+      "dice": 0.02105711018513326,
+      "label_pixels": 194672
+    },
+    "seal": {
+      "iou": 0.48194802623955724,
+      "precision": 0.8215932104273684,
+      "recall": 0.5382811615761321,
+      "dice": 0.6504250050691727,
+      "label_pixels": 26178947
+    },
+    "whale": {
+      "iou": 0.6138681594214556,
+      "precision": 0.6788543391301195,
+      "recall": 0.8650936410801034,
+      "dice": 0.7607413974156562,
+      "label_pixels": 1623326
+    },
+    "foreground_miou": 0.4372577136957434,
+    "pixel_accuracy": 0.9586605739377756,
+    "background_fp_fraction": 0.0034062108998408743,
+    "penguin_on_background": 0.0010468493703854834,
+    "other_bird_on_background": 0.0006019419374573227,
+    "seal_on_background": 0.0015903518746422764,
+    "whale_on_background": 0.00016706771735579178
+  },
+  "source_animals": {
+    "background": {
+      "iou": 0.977490157897169,
+      "precision": 0.986015649135311,
+      "recall": 0.9912320403401848,
+      "dice": 0.9886169637745416,
+      "label_pixels": 511179017
+    },
+    "penguin": {
+      "iou": 0.8414228527422516,
+      "precision": 0.9085869146406472,
+      "recall": 0.9192419185957058,
+      "dice": 0.9138833608904142,
+      "label_pixels": 14688660
+    },
+    "other_bird": {
+      "iou": 0.8648467332034558,
+      "precision": 0.9355370597591773,
+      "recall": 0.9196505892752223,
+      "dice": 0.927525804458806,
+      "label_pixels": 64213713
+    },
+    "seal": {
+      "iou": 0.9039814000567937,
+      "precision": 0.9788904652848984,
+      "recall": 0.9219541014145483,
+      "dice": 0.9495695704063379,
+      "label_pixels": 25689332
+    },
+    "whale": {
+      "iou": 0.7736046683590057,
+      "precision": 0.9239422332537567,
+      "recall": 0.8262201583007932,
+      "dice": 0.8723529906749387,
+      "label_pixels": 2760441
+    },
+    "foreground_miou": 0.8459639135903767,
+    "pixel_accuracy": 0.9784773738231197,
+    "background_fp_fraction": 0.008767959659815222,
+    "penguin_on_background": 0.0018586541473786667,
+    "other_bird_on_background": 0.005988733688573919,
+    "seal_on_background": 0.0007074605724671206,
+    "whale_on_background": 0.0002131112513955165
+  },
+  "nature": {
+    "background": {
+      "iou": 0.9994707106512682,
+      "precision": 1.0,
+      "recall": 0.9994707106512682,
+      "dice": 0.9997352852702907,
+      "label_pixels": 32838371
+    },
+    "penguin": {
+      "iou": null,
+      "precision": null,
+      "recall": null,
+      "dice": null,
+      "label_pixels": 0
+    },
+    "other_bird": {
+      "iou": null,
+      "precision": null,
+      "recall": null,
+      "dice": null,
+      "label_pixels": 0
+    },
+    "seal": {
+      "iou": null,
+      "precision": null,
+      "recall": null,
+      "dice": null,
+      "label_pixels": 0
+    },
+    "whale": {
+      "iou": null,
+      "precision": null,
+      "recall": null,
+      "dice": null,
+      "label_pixels": 0
+    },
+    "foreground_miou": null,
+    "pixel_accuracy": 0.9994707106512682,
+    "background_fp_fraction": 0.0005292893487317017,
+    "penguin_on_background": 3.1578911146353755e-05,
+    "other_bird_on_background": 0.0004056534960275587,
+    "seal_on_background": 8.983393238355216e-06,
+    "whale_on_background": 8.307354831943399e-05
+  },
+  "last_private": {
+    "background": {
+      "iou": 0.9666695424351824,
+      "precision": 0.9811229733291024,
+      "recall": 0.9849892987213853,
+      "dice": 0.9830523344946163,
+      "label_pixels": 570505191
+    },
+    "penguin": {
+      "iou": 0.6839358010410642,
+      "precision": 0.9705458281431985,
+      "recall": 0.6984325486364812,
+      "dice": 0.812306265616816,
+      "label_pixels": 34065427
+    },
+    "other_bird": {
+      "iou": 0.0017533649910771321,
+      "precision": 0.001771112838032678,
+      "recall": 0.14891715295471358,
+      "dice": 0.003500592166401657,
+      "label_pixels": 194672
+    },
+    "seal": {
+      "iou": 0.45612416630873553,
+      "precision": 0.845585066818726,
+      "recall": 0.497568790677486,
+      "dice": 0.6264907579482141,
+      "label_pixels": 26178947
+    },
+    "whale": {
+      "iou": 0.07778693205658,
+      "precision": 0.10539120898313677,
+      "recall": 0.2289811165471384,
+      "dice": 0.14434565820565443,
+      "label_pixels": 1623326
+    },
+    "foreground_miou": 0.30490006609936426,
+    "pixel_accuracy": 0.9471880539660236,
+    "background_fp_fraction": 0.015010701278614659,
+    "penguin_on_background": 0.0012656379142394166,
+    "other_bird_on_background": 0.006488221419180742,
+    "seal_on_background": 0.004169439713301399,
+    "whale_on_background": 0.003087402231893101
+  },
+  "inference": {
+    "960": {
+      "private": {
+        "background": {
+          "iou": 0.9728787259553632,
+          "precision": 0.976124492465187,
+          "recall": 0.9965937891001592,
+          "dice": 0.9862529441430804,
+          "label_pixels": 570505191
+        },
+        "penguin": {
+          "iou": 0.642574084043175,
+          "precision": 0.973886384942039,
+          "recall": 0.6538396539106937,
+          "dice": 0.7823989070392334,
+          "label_pixels": 34065427
+        },
+        "other_bird": {
+          "iou": 0.010640585078785769,
+          "precision": 0.010784498832926993,
+          "recall": 0.4436333936056546,
+          "dice": 0.02105711018513326,
+          "label_pixels": 194672
+        },
+        "seal": {
+          "iou": 0.48194802623955724,
+          "precision": 0.8215932104273684,
+          "recall": 0.5382811615761321,
+          "dice": 0.6504250050691727,
+          "label_pixels": 26178947
+        },
+        "whale": {
+          "iou": 0.6138681594214556,
+          "precision": 0.6788543391301195,
+          "recall": 0.8650936410801034,
+          "dice": 0.7607413974156562,
+          "label_pixels": 1623326
+        },
+        "foreground_miou": 0.4372577136957434,
+        "pixel_accuracy": 0.9586605739377756,
+        "background_fp_fraction": 0.0034062108998408743,
+        "penguin_on_background": 0.0010468493703854834,
+        "other_bird_on_background": 0.0006019419374573227,
+        "seal_on_background": 0.0015903518746422764,
+        "whale_on_background": 0.00016706771735579178
+      },
+      "landscapes": {
+        "background": {
+          "iou": 0.9640634708786889,
+          "precision": 1.0,
+          "recall": 0.9640634708786889,
+          "dice": 0.981702969555646,
+          "label_pixels": 81268199
+        },
+        "penguin": {
+          "iou": null,
+          "precision": null,
+          "recall": null,
+          "dice": null,
+          "label_pixels": 0
+        },
+        "other_bird": {
+          "iou": null,
+          "precision": null,
+          "recall": null,
+          "dice": null,
+          "label_pixels": 0
+        },
+        "seal": {
+          "iou": null,
+          "precision": null,
+          "recall": null,
+          "dice": null,
+          "label_pixels": 0
+        },
+        "whale": {
+          "iou": null,
+          "precision": null,
+          "recall": null,
+          "dice": null,
+          "label_pixels": 0
+        },
+        "foreground_miou": null,
+        "pixel_accuracy": 0.9640634708786889,
+        "background_fp_fraction": 0.03593652912131103,
+        "penguin_on_background": 0.001161659802501591,
+        "other_bird_on_background": 0.001201072513001057,
+        "seal_on_background": 0.0,
+        "whale_on_background": 0.03357379680580838
+      },
+      "private_confusion_matrix": [
+        [
+          568561930,
+          597233,
+          343411,
+          907304,
+          95313
+        ],
+        [
+          7943773,
+          22273327,
+          1695135,
+          2152657,
+          535
+        ],
+        [
+          108309,
+          0,
+          86363,
+          0,
+          0
+        ],
+        [
+          5635656,
+          0,
+          5883159,
+          14091634,
+          568498
+        ],
+        [
+          218997,
+          0,
+          0,
+          0,
+          1404329
+        ]
+      ]
+    },
+    "Native": {
+      "private": {
+        "background": {
+          "iou": 0.8976994330673058,
+          "precision": 0.9560074290502925,
+          "recall": 0.9363807734397985,
+          "dice": 0.9460923236050386,
+          "label_pixels": 570505191
+        },
+        "penguin": {
+          "iou": 0.4539979362075743,
+          "precision": 0.6661962517641391,
+          "recall": 0.5876842524240192,
+          "dice": 0.6244822291725193,
+          "label_pixels": 34065427
+        },
+        "other_bird": {
+          "iou": 0.006519711522171807,
+          "precision": 0.006530711007700705,
+          "recall": 0.7947008301142434,
+          "dice": 0.012954960439496946,
+          "label_pixels": 194672
+        },
+        "seal": {
+          "iou": 0.0076069969131707035,
+          "precision": 0.305059512609267,
+          "recall": 0.007741144057474886,
+          "dice": 0.015099134754869565,
+          "label_pixels": 26178947
+        },
+        "whale": {
+          "iou": 0.01457262178884426,
+          "precision": 0.015567004721059954,
+          "recall": 0.18575628062385496,
+          "dice": 0.028726621388916514,
+          "label_pixels": 1623326
+        },
+        "foreground_miou": 0.12067431660794026,
+        "pixel_accuracy": 0.8772007030654526,
+        "background_fp_fraction": 0.06361922656020144,
+        "penguin_on_background": 0.01405564949539609,
+        "other_bird_on_background": 0.019547222664973087,
+        "seal_on_background": 0.00021954576746349008,
+        "whale_on_background": 0.02979680863236878
+      },
+      "landscapes": {
+        "background": {
+          "iou": 0.9186464314288545,
+          "precision": 1.0,
+          "recall": 0.9186464314288545,
+          "dice": 0.9575984573090104,
+          "label_pixels": 81268199
+        },
+        "penguin": {
+          "iou": null,
+          "precision": null,
+          "recall": null,
+          "dice": null,
+          "label_pixels": 0
+        },
+        "other_bird": {
+          "iou": null,
+          "precision": null,
+          "recall": null,
+          "dice": null,
+          "label_pixels": 0
+        },
+        "seal": {
+          "iou": null,
+          "precision": null,
+          "recall": null,
+          "dice": null,
+          "label_pixels": 0
+        },
+        "whale": {
+          "iou": null,
+          "precision": null,
+          "recall": null,
+          "dice": null,
+          "label_pixels": 0
+        },
+        "foreground_miou": null,
+        "pixel_accuracy": 0.9186464314288545,
+        "background_fp_fraction": 0.08135356857114552,
+        "penguin_on_background": 0.0007475125663852844,
+        "other_bird_on_background": 0.046622000322660034,
+        "seal_on_background": 0.03056365257952868,
+        "whale_on_background": 0.0034204031025715236
+      },
+      "private_confusion_matrix": [
+        [
+          534210092,
+          8018821,
+          11151792,
+          125252,
+          16999234
+        ],
+        [
+          7785123,
+          20019715,
+          5379669,
+          336406,
+          544514
+        ],
+        [
+          8378,
+          31588,
+          154706,
+          0,
+          0
+        ],
+        [
+          16187186,
+          1980653,
+          6283094,
+          202655,
+          1525359
+        ],
+        [
+          602046,
+          0,
+          719737,
+          0,
+          301543
+        ]
+      ]
+    }
+  }
+}

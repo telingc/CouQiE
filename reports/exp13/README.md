@@ -16,7 +16,7 @@ Saved epoch logs: [CSV](metrics.csv). The plot separates training/animal-validat
 
 ![Public development comparison](comparison.jpg)
 
-Full masks, inference devices and local gallery: `E:\workspace\pyscripts\semseg\artifacts\experiments\exp13_results\run_20261111_150108`. Nine frozen benchmark_v2 references are scored with native and aspect-preserving resize inference only. The 16 far-penguin points use exact existing pixel coordinates, reporting penguin hits and any-animal hits, not instance recall. Six user-declared landscape negatives report pooled and per-animal false-positive pixel fractions. NJU photos are visualization only; no IoU is reported.
+Full masks, inference devices and local gallery: `artifacts/experiments/exp13_results/run_20261111_150108`. Nine frozen benchmark_v2 references are scored with native and aspect-preserving resize inference only. The 16 far-penguin points use exact existing pixel coordinates, reporting penguin hits and any-animal hits, not instance recall. Six user-declared landscape negatives report pooled and per-animal false-positive pixel fractions. NJU photos are visualization only; no IoU is reported.
 
 benchmark_v2 is preserved unchanged. Its masks are development references, partly model-assisted: near uses experiment-11 resize, and far has model-assisted bands. Scores are reference agreement, not an independent blind test. Historical reference predictions, when available, are rescored after mapping their whale labels to background; historical five-class validation mIoU is never compared directly with this four-class mIoU.
 

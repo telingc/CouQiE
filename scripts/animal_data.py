@@ -2,6 +2,7 @@
 
 Prepared bird/seal splits: images/, masks/, manifest.json. Existing Roboflow
 splits remain readable directly from _annotations.coco.json.
+Merged-source layout and archived-root compatibility: Codex, 2026-11-12.
 """
 
 from project_paths import PROJECT_ROOT
@@ -127,7 +128,7 @@ class AnimalDataset(Dataset):
         return tensor, torch.from_numpy(values)
 
 
-def build_datasets(root, image_size=640, *, include_background=False):
+def _build_legacy_datasets(root, image_size=640, *, include_background=False):
     """Keep source splits; exclude byte-identical leakage, preferring test/valid.
 
     Hashing detects exact copies, including the known penguin train/valid copy.
@@ -216,6 +217,55 @@ def build_datasets(root, image_size=640, *, include_background=False):
             background_overlap_policy="Existing animal splits unchanged; exclude overlapping nature records. Prepared-byte and recorded original-byte hashes only, not a near-duplicate guarantee.",
             background_mask_policy="Explicit natural stuff=0; other and padded pixels=255 ignored")
     return {split: ConcatDataset(values) for split, values in datasets.items()}, summary
+
+
+def build_datasets(root, image_size=640, *, include_background=False):
+    """Use the current merged layout; explicit archive roots retain old behavior."""
+    root=Path(root)
+    if (root/'data/.reorganizing.json').exists():raise RuntimeError('Dataset reorganization is in progress; retry after activation')
+    layout_path=root/'data/dataset_layout.json'
+    if not layout_path.exists():return _build_legacy_datasets(root,image_size,include_background=include_background)
+    layout=json.loads(layout_path.read_text())
+    if layout['version']!='merged_sources_v1' or not layout['deduplicated']:raise ValueError('Unsupported/unverified dataset layout')
+    sources=list(layout['sources'])+(['dataset_nature'] if include_background else [])
+    data={split:[AnimalDataset(root/'data'/name,split,image_size) for name in sources] for split in ('train','valid','test')}
+    background_excluded=[]
+    if include_background:
+        # Keep the previous rule: animal data wins over matching background data,
+        # including identity hashes of the newly added whale originals.
+        animal_hashes=set()
+        for children in data.values():
+            for child in children:
+                if child.root.name=='dataset_nature':continue
+                for row in child.records:
+                    animal_hashes.add(row['image_sha256'])
+                    if row.get('raw_sha256'):animal_hashes.add(row['raw_sha256'])
+        for split,children in data.items():
+            background=children[-1];retained=[]
+            for i,row in enumerate(background.records):
+                if sha256_file(background.image_path(i))!=row['prepared_image_sha256']:raise ValueError('Changed prepared background image')
+                if sha256_file(background.split_dir/row['mask'])!=row['prepared_mask_sha256']:raise ValueError('Changed prepared background mask')
+                if {row['prepared_image_sha256'],row['original_image_sha256']}&animal_hashes:
+                    background_excluded.append(dict(split=split,image=row['image']))
+                else:retained.append(row)
+            background.records=retained
+    manifests={f'{name}/{split}':hashlib.sha256((root/'data'/name/split/'manifest.json').read_bytes()).hexdigest()
+               for name in sources for split in data}
+    summary=dict(class_names=list(CLASS_NAMES),image_size=image_size,layout_version=layout['version'],
+        sources={split:{d.root.name:len(d) for d in children} for split,children in data.items()},
+        class_samples={split:dict(Counter(CLASS_NAMES[r['sample_class']] for d in children for r in d.records)) for split,children in data.items()},
+        origin_sources={split:dict(Counter(r.get('origin_dataset',d.root.name) for d in children for r in d.records)) for split,children in data.items()},
+        annotation_manifest_sha256=manifests,excluded_exact_duplicates=[],
+        background_excluded_exact_duplicates=background_excluded,
+        duplicate_policy='Verified during versioned merge; old Wildlife source-prefix dedup retained; exact identity priority test/valid/train',
+        legacy_snapshot=layout['legacy_snapshot'],target_in_source_training=False,
+        seal_mask_note='SealID masks are recovered approximations; Wildlife source masks retain their original limitations',
+        whale_mask_note='Happywhale masks are unreviewed SAM3 pseudo-labels, not independent ground truth')
+    return {split:ConcatDataset(children) for split,children in data.items()},summary
+
+
+def sha256_file(path):
+    with Path(path).open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
 
 
 @torch.inference_mode()

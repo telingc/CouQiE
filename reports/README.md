@@ -1,6 +1,6 @@
 # Experiment reports
 
-14 experiment entries have concise English reports. Experiments 1-4 are retrospective inference replays using the surviving binary checkpoint. Experiments 5 and 7-12 use preserved trained weights. Experiment 6 is a historical resource test; experiment 13 is a separate four-class baseline. Experiment 14, when available, reports fixed-weight float32 scale sensitivity separately from the historical AMP comparison. No training is performed by this report builder.
+16 experiment entries have concise English reports. Experiments 1-4 are retrospective inference replays using the surviving binary checkpoint. Experiments 5 and 7-12 use preserved trained weights. Experiment 6 is a historical resource test; experiment 13 is a separate four-class baseline. Experiment 14, when available, reports fixed-weight float32 scale sensitivity separately from the historical AMP comparison. Experiment 15 completed its source baseline; its proposed target fine-tuning was not run. Experiment 16 group B is the final five-class submission at fixed 960. No training is performed by this report builder.
 
 | Experiment | Purpose | Result | Status | Report |
 |---|---|---|---|---|
@@ -18,6 +18,8 @@
 | 12 | Sequential training without replay | Best / final historical animal mIoU: 30.44% / 6.89% | completed | [Read](exp12/README.md) |
 | 13 | New four-class ImageNet baseline | Separate four-class baseline; see its own metrics, not a whale-only ablation | completed | [Read](exp13/README.md) |
 | 14 | Inference Scale Sensitivity | Fixed experiment-13 weights; 75 float32 scale cases; see per-image diagnostics | completed | [Read](exp14/README.md) |
+| 15 | Five-class baseline and proposed target adaptation | Stage A complete; target fine-tuning not run | stage_a_complete_stage_b_not_run | [Read](exp15/README.md) |
+| 16 | Six-group Antarctic background sampling | Selected epoch 6; private SAM3-reference mIoU 43.73%; fixed 960 | completed_group_b | [Read](exp16/README.md) |
 
 Historical binary/five-class comparison only: 640 letterbox resize, restored logits, original-resolution scoring. Resize uses AMP as recorded below. Experiments 13 and 14 have separate four-class reports; their results are not pooled into this table.
 
@@ -43,6 +45,6 @@ Historical binary/five-class replay protocol (experiments 1-12). Fixed developme
 
 [Reference definitions](references/benchmark.md) | [All image and pooled metrics](metrics.csv) | [Per-class pixel counts](class_metrics.csv)
 
-[Project closeout](CLOSEOUT.md) | [Code map](../CODE_MAP.md)
+[Project overview](../README.md) | [Dataset policy](../DATASETS.md)
 
-Formal experiments stop at 14. The unnumbered experiment-10 scale preview was declined by the user and archived locally; it is excluded from this index.
+The register now contains experiments 1-16. E15 target fine-tuning was not run; E16 group B is the final submission. The unnumbered experiment-10 scale preview was declined by the user and archived locally; it is excluded from this index.
